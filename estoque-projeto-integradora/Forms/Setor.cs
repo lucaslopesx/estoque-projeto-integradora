@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace estoque_projeto_integradora.Forms
 {
-    public partial class Pedidos : Form
+    public partial class Setor : Form
     {
-        public Pedidos()
+        public Setor()
         {
             InitializeComponent();
         }

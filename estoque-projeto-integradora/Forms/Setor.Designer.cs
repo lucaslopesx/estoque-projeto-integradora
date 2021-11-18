@@ -1,7 +1,7 @@
 ﻿
 namespace estoque_projeto_integradora.Forms
 {
-    partial class Pedidos
+    partial class Setor
     {
         /// <summary>
         /// Required designer variable.

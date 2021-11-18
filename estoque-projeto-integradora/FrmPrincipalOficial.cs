@@ -113,7 +113,7 @@ namespace estoque_projeto_integradora
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.Pedidos(), sender);
+            OpenChildForm(new Forms.Setor(), sender);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

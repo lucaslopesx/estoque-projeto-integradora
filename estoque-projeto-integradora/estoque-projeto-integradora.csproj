@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Alterar.cs">
+    <Compile Include="Forms\cadClientecs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Alterar.Designer.cs">
-      <DependentUpon>Alterar.cs</DependentUpon>
+    <Compile Include="Forms\cadClientecs.Designer.cs">
+      <DependentUpon>cadClientecs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Pedidos.cs">
+    <Compile Include="Forms\cadFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Pedidos.Designer.cs">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <Compile Include="Forms\cadFornecedor.Designer.cs">
+      <DependentUpon>cadFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadFuncionario.Designer.cs">
+      <DependentUpon>CadFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CadProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CadProduto.Designer.cs">
+      <DependentUpon>CadProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setor.Designer.cs">
+      <DependentUpon>Setor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadastroCliente.cs">
       <SubType>Form</SubType>
@@ -109,11 +127,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
-    <EmbeddedResource Include="Forms\Alterar.resx">
-      <DependentUpon>Alterar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Pedidos.resx">
-      <DependentUpon>Pedidos.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Setor.resx">
+      <DependentUpon>Setor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroEstoque.resx">
       <DependentUpon>frmCadastroEstoque.cs</DependentUpon>

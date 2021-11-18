@@ -235,7 +235,7 @@ namespace estoque_projeto_integradora
             // pictureBox1
             // 
             this.pictureBox1.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
-            this.pictureBox1.Location = new System.Drawing.Point(263, 177);
+            this.pictureBox1.Location = new System.Drawing.Point(321, 302);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(729, 268);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -313,7 +313,7 @@ namespace estoque_projeto_integradora
             this.cadPedidos.Name = "cadPedidos";
             this.cadPedidos.Size = new System.Drawing.Size(161, 67);
             this.cadPedidos.TabIndex = 3;
-            this.cadPedidos.Text = "Pedidos";
+            this.cadPedidos.Text = "Setor";
             this.cadPedidos.UseVisualStyleBackColor = true;
             this.cadPedidos.Click += new System.EventHandler(this.cadPedidos_Click);
             // 
