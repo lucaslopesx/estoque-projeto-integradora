@@ -35,6 +35,14 @@ namespace estoque_projeto_integradora
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //methods
+        private void corPainel()
+        {
+        }
+        private void visiblePanel()
+        {
+            panelCadastrar.Visible = false;
+            painelExcluir.Visible = false;
+        }
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -62,9 +70,11 @@ namespace estoque_projeto_integradora
                     paneltitlebar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     panelCadastrar.BackColor = color;
+                    painelExcluir.BackColor = color;
                     ThemeColor.PrimeiraCor = color;
                     ThemeColor.SegundaCor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnFechaChildForms.Visible = true;
+                  
                 }
             }
         }
@@ -102,37 +112,44 @@ namespace estoque_projeto_integradora
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             OpenChildForm(new Forms.Pedidos(), sender);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             ActivateButton(sender);
             panelCadastrar.Visible = true;
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAlterar_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            visiblePanel();
+            OpenChildForm(new Forms.Alterar(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             ActivateButton(sender);
+            painelExcluir.Visible = true;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             ActivateButton(sender);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             ActivateButton(sender);
         }
 
         private void btnFechaChildForms_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             if (activateForm != null)
                 activateForm.Close();
             Reset();
@@ -146,7 +163,6 @@ namespace estoque_projeto_integradora
             panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btnFechaChildForms.Visible = false;
-            panelCadastrar.Visible = false;
 
         }
 
@@ -173,5 +189,55 @@ namespace estoque_projeto_integradora
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void excluFunc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExcluProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cdaCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void PesqPedidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PesqFunc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadaFornecedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadaFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadPedidos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
