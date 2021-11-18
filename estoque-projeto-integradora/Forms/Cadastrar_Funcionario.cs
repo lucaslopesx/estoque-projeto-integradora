@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace estoque_projeto_integradora
+namespace estoque_projeto_integradora.Forms
 {
-    public partial class frmCadastroFornecedor : Form
+    public partial class Cadastrar_Funcionario : Form
     {
-        public frmCadastroFornecedor()
+        public Cadastrar_Funcionario()
         {
             InitializeComponent();
         }

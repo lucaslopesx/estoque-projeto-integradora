@@ -46,67 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCadastroCliente.cs">
+    <Compile Include="Forms\Cadastrar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCliente.Designer.cs">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Cliente.Designer.cs">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroEstoque.cs">
+    <Compile Include="Forms\X.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroEstoque.Designer.cs">
-      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
+    <Compile Include="Forms\X.Designer.cs">
+      <DependentUpon>X.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.cs">
+    <Compile Include="Forms\Cadastrar_Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroFornecedor.Designer.cs">
-      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Fornecedor.Designer.cs">
+      <DependentUpon>Cadastrar_Fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroFuncionario.cs">
+    <Compile Include="Forms\Cadastrar_Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroFuncionario.Designer.cs">
-      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Funcionarios.Designer.cs">
+      <DependentUpon>Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroPedido.cs">
+    <Compile Include="Forms\Cadastrar_Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroPedido.Designer.cs">
-      <DependentUpon>frmCadastroPedido.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Produtos.Designer.cs">
+      <DependentUpon>Cadastrar_Produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroProduto.cs">
+    <Compile Include="Forms\Cadastrar_Setor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroProduto.Designer.cs">
-      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Setor.Designer.cs">
+      <DependentUpon>Cadastrar_Setor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroSetor.cs">
+    <Compile Include="FrmPrincipalOficial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroSetor.Designer.cs">
-      <DependentUpon>frmCadastroSetor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrincipal.Designer.cs">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <Compile Include="FrmPrincipalOficial.Designer.cs">
+      <DependentUpon>FrmPrincipalOficial.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmCadastroEstoque.resx">
-      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Forms\Cadastrar_Cliente.resx">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroPedido.resx">
-      <DependentUpon>frmCadastroPedido.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\X.resx">
+      <DependentUpon>X.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroSetor.resx">
-      <DependentUpon>frmCadastroSetor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Cadastrar_Setor.resx">
+      <DependentUpon>Cadastrar_Setor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="FrmPrincipalOficial.resx">
+      <DependentUpon>FrmPrincipalOficial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -116,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -129,6 +125,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\value.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-out %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\value %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross-out %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Planet9_3840x2160.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

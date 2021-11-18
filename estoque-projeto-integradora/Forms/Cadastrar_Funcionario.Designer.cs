@@ -1,7 +1,7 @@
 ﻿
-namespace estoque_projeto_integradora
+namespace estoque_projeto_integradora.Forms
 {
-    partial class frmCadastroSetor
+    partial class Cadastrar_Funcionario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,17 +29,10 @@ namespace estoque_projeto_integradora
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // frmCadastroSetor
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 206);
-            this.Name = "frmCadastroSetor";
-            this.Text = "frmCadastroSetor";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Cadastrar_Funcionario";
         }
 
         #endregion
