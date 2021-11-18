@@ -99,6 +99,9 @@
     <EmbeddedResource Include="frmCadastroEstoque.resx">
       <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastroPedido.resx">
+      <DependentUpon>frmCadastroPedido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastroSetor.resx">
       <DependentUpon>frmCadastroSetor.cs</DependentUpon>
     </EmbeddedResource>
