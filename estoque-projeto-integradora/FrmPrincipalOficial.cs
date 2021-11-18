@@ -113,7 +113,7 @@ namespace estoque_projeto_integradora
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.Setor(), sender);
+            OpenChildForm(new Forms.Cadastrar_Setor(), sender);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -125,7 +125,7 @@ namespace estoque_projeto_integradora
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.Alterar(), sender);
+            //OpenChildForm(new Forms.Alterar(), sender);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -215,7 +215,8 @@ namespace estoque_projeto_integradora
 
         private void cadCliente_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.X(), sender);
         }
 
         private void cadaFornecedor_Click(object sender, EventArgs e)

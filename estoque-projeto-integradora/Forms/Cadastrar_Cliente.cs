@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace estoque_projeto_integradora.Forms
 {
-    public partial class CadFuncionario : Form
+    public partial class Cadastrar_Cliente : Form
     {
-        public CadFuncionario()
+        public Cadastrar_Cliente()
         {
             InitializeComponent();
         }

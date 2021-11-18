@@ -46,77 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\cadClientecs.cs">
+    <Compile Include="Forms\Cadastrar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\cadClientecs.Designer.cs">
-      <DependentUpon>cadClientecs.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Cliente.Designer.cs">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\cadFornecedor.cs">
+    <Compile Include="Forms\X.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\cadFornecedor.Designer.cs">
-      <DependentUpon>cadFornecedor.cs</DependentUpon>
+    <Compile Include="Forms\X.Designer.cs">
+      <DependentUpon>X.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CadFuncionario.cs">
+    <Compile Include="Forms\Cadastrar_Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CadFuncionario.Designer.cs">
-      <DependentUpon>CadFuncionario.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Fornecedor.Designer.cs">
+      <DependentUpon>Cadastrar_Fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CadProduto.cs">
+    <Compile Include="Forms\Cadastrar_Funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CadProduto.Designer.cs">
-      <DependentUpon>CadProduto.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Funcionarios.Designer.cs">
+      <DependentUpon>Cadastrar_Funcionarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Setor.cs">
+    <Compile Include="Forms\Cadastrar_Produtos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Setor.Designer.cs">
-      <DependentUpon>Setor.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Produtos.Designer.cs">
+      <DependentUpon>Cadastrar_Produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastroCliente.cs">
+    <Compile Include="Forms\Cadastrar_Setor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCadastroCliente.Designer.cs">
-      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroEstoque.Designer.cs">
-      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroFornecedor.Designer.cs">
-      <DependentUpon>frmCadastroFornecedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroFuncionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroFuncionario.Designer.cs">
-      <DependentUpon>frmCadastroFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroPedido.Designer.cs">
-      <DependentUpon>frmCadastroPedido.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroProduto.Designer.cs">
-      <DependentUpon>frmCadastroProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadastroSetor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastroSetor.Designer.cs">
-      <DependentUpon>frmCadastroSetor.cs</DependentUpon>
+    <Compile Include="Forms\Cadastrar_Setor.Designer.cs">
+      <DependentUpon>Cadastrar_Setor.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipalOficial.cs">
       <SubType>Form</SubType>
@@ -127,17 +91,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
-    <EmbeddedResource Include="Forms\Setor.resx">
-      <DependentUpon>Setor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Cadastrar_Cliente.resx">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroEstoque.resx">
-      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\X.resx">
+      <DependentUpon>X.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroPedido.resx">
-      <DependentUpon>frmCadastroPedido.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastroSetor.resx">
-      <DependentUpon>frmCadastroSetor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Cadastrar_Setor.resx">
+      <DependentUpon>Cadastrar_Setor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipalOficial.resx">
       <DependentUpon>FrmPrincipalOficial.cs</DependentUpon>
