@@ -39,18 +39,25 @@ namespace estoque_projeto_integradora
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.paneltitlebar = new System.Windows.Forms.Panel();
+            this.btnFechaChildForms = new System.Windows.Forms.Button();
             this.panelCadastrar = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lbltitle = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnMaximizar = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.paneltitlebar.SuspendLayout();
             this.panelCadastrar.SuspendLayout();
+            this.panelDesktop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -67,7 +74,7 @@ namespace estoque_projeto_integradora
             this.panelMenu.ForeColor = System.Drawing.Color.Gainsboro;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(262, 689);
+            this.panelMenu.Size = new System.Drawing.Size(262, 748);
             this.panelMenu.TabIndex = 0;
             // 
             // button5
@@ -214,66 +221,99 @@ namespace estoque_projeto_integradora
             // 
             // paneltitlebar
             // 
-            this.paneltitlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.paneltitlebar.Controls.Add(this.button9);
-            this.paneltitlebar.Controls.Add(this.panelCadastrar);
+            this.paneltitlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(31)))), ((int)(((byte)(29)))));
+            this.paneltitlebar.Controls.Add(this.btnClose);
+            this.paneltitlebar.Controls.Add(this.btnMaximizar);
+            this.paneltitlebar.Controls.Add(this.btnMinimizar);
+            this.paneltitlebar.Controls.Add(this.btnFechaChildForms);
             this.paneltitlebar.Controls.Add(this.lbltitle);
             this.paneltitlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneltitlebar.Location = new System.Drawing.Point(262, 0);
             this.paneltitlebar.Name = "paneltitlebar";
-            this.paneltitlebar.Size = new System.Drawing.Size(1125, 137);
+            this.paneltitlebar.Size = new System.Drawing.Size(1188, 137);
             this.paneltitlebar.TabIndex = 1;
+            this.paneltitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.paneltitlebar_MouseDown);
+            // 
+            // btnFechaChildForms
+            // 
+            this.btnFechaChildForms.FlatAppearance.BorderSize = 0;
+            this.btnFechaChildForms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechaChildForms.Image = global::estoque_projeto_integradora.Properties.Resources.cross_out__2_1;
+            this.btnFechaChildForms.Location = new System.Drawing.Point(22, 12);
+            this.btnFechaChildForms.Name = "btnFechaChildForms";
+            this.btnFechaChildForms.Size = new System.Drawing.Size(75, 49);
+            this.btnFechaChildForms.TabIndex = 3;
+            this.btnFechaChildForms.UseVisualStyleBackColor = true;
+            this.btnFechaChildForms.Click += new System.EventHandler(this.btnFechaChildForms_Click);
             // 
             // panelCadastrar
             // 
-            this.panelCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(31)))), ((int)(((byte)(29)))));
+            this.panelCadastrar.Controls.Add(this.button9);
             this.panelCadastrar.Controls.Add(this.button8);
             this.panelCadastrar.Controls.Add(this.button7);
             this.panelCadastrar.Controls.Add(this.button6);
             this.panelCadastrar.Controls.Add(this.button1);
-            this.panelCadastrar.Location = new System.Drawing.Point(0, 67);
+            this.panelCadastrar.Location = new System.Drawing.Point(3, 13);
             this.panelCadastrar.Name = "panelCadastrar";
             this.panelCadastrar.Size = new System.Drawing.Size(1125, 70);
             this.panelCadastrar.TabIndex = 2;
+            this.panelCadastrar.Visible = false;
+            // 
+            // button9
+            // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(957, 14);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(127, 49);
+            this.button9.TabIndex = 3;
+            this.button9.Text = "Pagamento";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(482, 14);
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(732, 14);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(127, 49);
             this.button8.TabIndex = 2;
-            this.button8.Text = "Funcionario";
+            this.button8.Text = "Produto";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(334, 14);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(263, 14);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 49);
             this.button7.TabIndex = 2;
-            this.button7.Text = "Funcionario";
+            this.button7.Text = "Fornecedor";
             this.button7.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(174, 14);
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(41, 14);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(127, 49);
             this.button6.TabIndex = 1;
-            this.button6.Text = "Funcionario";
+            this.button6.Text = "Cliente";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(22, 14);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(513, 14);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 49);
             this.button1.TabIndex = 0;
@@ -286,7 +326,7 @@ namespace estoque_projeto_integradora
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.ForeColor = System.Drawing.Color.White;
-            this.lbltitle.Location = new System.Drawing.Point(529, 9);
+            this.lbltitle.Location = new System.Drawing.Point(538, 9);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(134, 44);
             this.lbltitle.TabIndex = 0;
@@ -294,30 +334,72 @@ namespace estoque_projeto_integradora
             // 
             // panelDesktop
             // 
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Controls.Add(this.panelCadastrar);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(262, 137);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1125, 552);
+            this.panelDesktop.Size = new System.Drawing.Size(1188, 611);
             this.panelDesktop.TabIndex = 2;
             // 
-            // button9
+            // pictureBox1
             // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(37, 29);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
+            this.pictureBox1.Location = new System.Drawing.Point(263, 177);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(729, 268);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Location = new System.Drawing.Point(1017, 9);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(54, 41);
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.Text = "--";
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaximizar.ForeColor = System.Drawing.Color.White;
+            this.btnMaximizar.Location = new System.Drawing.Point(1077, 9);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(50, 41);
+            this.btnMaximizar.TabIndex = 5;
+            this.btnMaximizar.Text = "O";
+            this.btnMaximizar.UseVisualStyleBackColor = true;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(1133, 9);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(51, 41);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmPrincipalOficial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 689);
+            this.ClientSize = new System.Drawing.Size(1450, 748);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.paneltitlebar);
             this.Controls.Add(this.panelMenu);
+            this.MinimumSize = new System.Drawing.Size(1405, 736);
             this.Name = "FrmPrincipalOficial";
             this.Text = "FrmPrincipalOficial";
             this.panelMenu.ResumeLayout(false);
@@ -326,6 +408,8 @@ namespace estoque_projeto_integradora
             this.paneltitlebar.ResumeLayout(false);
             this.paneltitlebar.PerformLayout();
             this.panelCadastrar.ResumeLayout(false);
+            this.panelDesktop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -349,6 +433,11 @@ namespace estoque_projeto_integradora
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFechaChildForms;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnMaximizar;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }

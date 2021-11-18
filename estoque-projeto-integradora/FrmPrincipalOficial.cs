@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,7 +23,16 @@ namespace estoque_projeto_integradora
         {
             InitializeComponent();
             random = new Random();
+            btnFechaChildForms.Visible = false;
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         //methods
         private Color SelectThemeColor()
@@ -51,8 +61,10 @@ namespace estoque_projeto_integradora
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     paneltitlebar.BackColor = color;
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    panelCadastrar.BackColor = color;
                     ThemeColor.PrimeiraCor = color;
                     ThemeColor.SegundaCor = ThemeColor.ChangeColorBrightness(color, -0.3);
+                    btnFechaChildForms.Visible = true;
                 }
             }
         }
@@ -96,6 +108,7 @@ namespace estoque_projeto_integradora
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelCadastrar.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -116,6 +129,49 @@ namespace estoque_projeto_integradora
         private void button5_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void btnFechaChildForms_Click(object sender, EventArgs e)
+        {
+            if (activateForm != null)
+                activateForm.Close();
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            lbltitle.Text = "HOME";
+            paneltitlebar.BackColor = Color.FromArgb(0, 150, 136);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnFechaChildForms.Visible = false;
+            panelCadastrar.Visible = false;
+
+        }
+
+        private void paneltitlebar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
