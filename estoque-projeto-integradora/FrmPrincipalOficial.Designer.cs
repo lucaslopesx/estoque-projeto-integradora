@@ -90,7 +90,7 @@ namespace estoque_projeto_integradora
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(196, 609);
+            this.panelMenu.Size = new System.Drawing.Size(196, 681);
             this.panelMenu.TabIndex = 0;
             // 
             // button5
@@ -147,7 +147,7 @@ namespace estoque_projeto_integradora
             this.button3.Location = new System.Drawing.Point(0, 268);
             this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(49, 0, 0, 0);
+            this.button3.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(196, 67);
             this.button3.TabIndex = 4;
             this.button3.Text = "  Excluir";
@@ -168,7 +168,7 @@ namespace estoque_projeto_integradora
             this.btnAlterar.Location = new System.Drawing.Point(0, 201);
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Padding = new System.Windows.Forms.Padding(49, 0, 0, 0);
+            this.btnAlterar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnAlterar.Size = new System.Drawing.Size(196, 67);
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = " Alterar";
@@ -189,7 +189,7 @@ namespace estoque_projeto_integradora
             this.btnCadastrar.Location = new System.Drawing.Point(0, 134);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnCadastrar.Size = new System.Drawing.Size(196, 67);
             this.btnCadastrar.TabIndex = 2;
             this.btnCadastrar.Text = " Cadastrar";
@@ -210,7 +210,7 @@ namespace estoque_projeto_integradora
             this.btnPedidos.Location = new System.Drawing.Point(0, 67);
             this.btnPedidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Padding = new System.Windows.Forms.Padding(38, 0, 0, 0);
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.btnPedidos.Size = new System.Drawing.Size(196, 67);
             this.btnPedidos.TabIndex = 1;
             this.btnPedidos.Text = " Pedidos";
@@ -315,11 +315,12 @@ namespace estoque_projeto_integradora
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
-            this.pictureBox2.Location = new System.Drawing.Point(250, 245);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 114);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(547, 218);
+            this.pictureBox2.Size = new System.Drawing.Size(962, 494);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -535,7 +536,7 @@ namespace estoque_projeto_integradora
             this.lbltitle.AutoSize = true;
             this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitle.ForeColor = System.Drawing.Color.White;
-            this.lbltitle.Location = new System.Drawing.Point(310, 14);
+            this.lbltitle.Location = new System.Drawing.Point(376, 14);
             this.lbltitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltitle.Name = "lbltitle";
             this.lbltitle.Size = new System.Drawing.Size(103, 36);
@@ -548,7 +549,7 @@ namespace estoque_projeto_integradora
             this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimizar.ForeColor = System.Drawing.Color.White;
-            this.btnMinimizar.Location = new System.Drawing.Point(704, 7);
+            this.btnMinimizar.Location = new System.Drawing.Point(836, 7);
             this.btnMinimizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(40, 33);
@@ -563,7 +564,7 @@ namespace estoque_projeto_integradora
             this.btnMaximizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaximizar.ForeColor = System.Drawing.Color.White;
-            this.btnMaximizar.Location = new System.Drawing.Point(748, 7);
+            this.btnMaximizar.Location = new System.Drawing.Point(880, 7);
             this.btnMaximizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(38, 33);
@@ -578,7 +579,7 @@ namespace estoque_projeto_integradora
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(790, 7);
+            this.btnClose.Location = new System.Drawing.Point(922, 7);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(38, 33);
@@ -599,7 +600,7 @@ namespace estoque_projeto_integradora
             this.paneltitlebar.Location = new System.Drawing.Point(196, 0);
             this.paneltitlebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.paneltitlebar.Name = "paneltitlebar";
-            this.paneltitlebar.Size = new System.Drawing.Size(832, 67);
+            this.paneltitlebar.Size = new System.Drawing.Size(964, 67);
             this.paneltitlebar.TabIndex = 1;
             this.paneltitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.paneltitlebar_MouseDown);
             // 
@@ -620,7 +621,7 @@ namespace estoque_projeto_integradora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.ClientSize = new System.Drawing.Size(1160, 681);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.paneltitlebar);
             this.Controls.Add(this.panelMenu);
