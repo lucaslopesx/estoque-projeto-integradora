@@ -29,7 +29,7 @@ namespace estoque_projeto_integradora.Forms
                 preco = float.Parse(txtPrecoProduto.Text);
                 quantidade = int.Parse(txtqtd.Text);
                 total = preco * quantidade;
-                txtPrecoPedido.Text =  total;
+                txtPrecoPedido.Text = total.ToString() ;
             }
         }
     }
