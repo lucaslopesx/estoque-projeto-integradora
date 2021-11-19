@@ -29,48 +29,52 @@ namespace estoque_projeto_integradora.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cmdCadastrar = new System.Windows.Forms.Button();
+            this.txtNomeSetor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // cmdCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(338, 186);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 59);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Cadastrar Setor";
-            this.button1.UseVisualStyleBackColor = true;
+            this.cmdCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmdCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCadastrar.Location = new System.Drawing.Point(254, 257);
+            this.cmdCadastrar.MaximumSize = new System.Drawing.Size(147, 60);
+            this.cmdCadastrar.Name = "cmdCadastrar";
+            this.cmdCadastrar.Size = new System.Drawing.Size(147, 60);
+            this.cmdCadastrar.TabIndex = 20;
+            this.cmdCadastrar.Text = "Cadastrar Setor";
+            this.cmdCadastrar.UseVisualStyleBackColor = true;
+            this.cmdCadastrar.Click += new System.EventHandler(this.cmdCadastrar_Click);
             // 
-            // textBox1
+            // txtNomeSetor
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(419, 97);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 28);
-            this.textBox1.TabIndex = 19;
+            this.txtNomeSetor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNomeSetor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeSetor.Location = new System.Drawing.Point(189, 164);
+            this.txtNomeSetor.Name = "txtNomeSetor";
+            this.txtNomeSetor.Size = new System.Drawing.Size(287, 38);
+            this.txtNomeSetor.TabIndex = 19;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(290, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(183, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 45);
+            this.label1.Size = new System.Drawing.Size(193, 31);
             this.label1.TabIndex = 18;
-            this.label1.Text = "Nome : ";
+            this.label1.Text = "Nome do setor";
             // 
             // Cadastrar_Setor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 603);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(670, 490);
+            this.Controls.Add(this.cmdCadastrar);
+            this.Controls.Add(this.txtNomeSetor);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cadastrar_Setor";
             this.Text = "Cadastrar_Setor";
             this.ResumeLayout(false);
@@ -80,8 +84,8 @@ namespace estoque_projeto_integradora.Forms
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button cmdCadastrar;
+        private System.Windows.Forms.TextBox txtNomeSetor;
         private System.Windows.Forms.Label label1;
     }
 }

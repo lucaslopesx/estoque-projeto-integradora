@@ -213,6 +213,8 @@ namespace estoque_projeto_integradora
 
         private void ExcluProduto_Click(object sender, EventArgs e)
         {
+            visiblePanel();
+            OpenChildForm(new Forms.CadastrarEstoque(), sender);
 
         }
         private void cdaCliente_Click(object sender, EventArgs e)
@@ -237,22 +239,26 @@ namespace estoque_projeto_integradora
 
         private void cadaFornecedor_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.Cadastrar_Fornecedor(), sender);
         }
 
         private void cadaFuncionario_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.Cadastrar_Funcionario(), sender);
         }
 
         private void cadProduto_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.Cadastrar_Produto(), sender);
         }
 
         private void cadPedidos_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.Cadastrar_Setor(), sender);
         }
 
         private void AltCliente_Click(object sender, EventArgs e)

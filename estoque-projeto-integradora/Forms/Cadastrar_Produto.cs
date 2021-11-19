@@ -16,5 +16,7 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
+
+        
     }
 }

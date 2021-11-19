@@ -16,10 +16,25 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
-
+        Classes.Cliente dataCliente = new Classes.Cliente();
         private void Cadastrar_Cliente_Load(object sender, EventArgs e)
         {
 
+        }
+        private void cmdCadastrar_Click(object sender, EventArgs e)
+        {
+            dataCliente.TelefoneCliente = txtTelefone.Text;
+            dataCliente.NomeCliente = txtNome.Text;
+            dataCliente.EnderecoCliente = txtEndereco.Text;
+            dataCliente.CpfCliente = txtCpf.Text;
+
+            dataCliente.InsertCliente();
+
+            txtCpf.Text = "";
+            txtEndereco.Text = "";
+            txtNome.Text = "";
+            txtTelefone.Text = "";
+            MessageBox.Show("Cliente incluído com sucesso");
         }
     }
 }

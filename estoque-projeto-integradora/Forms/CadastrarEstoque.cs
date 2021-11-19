@@ -21,5 +21,15 @@ namespace estoque_projeto_integradora.Forms
         {
             Close();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("The selected value is " + dateTimePicker1.Text);
+        }
+
+        private void CadastrarEstoque_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

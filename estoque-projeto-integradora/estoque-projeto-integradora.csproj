@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Classes\Fornecedor.cs" />
+    <Compile Include="Classes\Funcionario.cs" />
+    <Compile Include="Classes\Geral.cs" />
+    <Compile Include="Classes\Produto.cs" />
+    <Compile Include="Classes\Setor.cs" />
     <Compile Include="Forms\Cadastrar Setor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Planet9_3840x2160.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inicio1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

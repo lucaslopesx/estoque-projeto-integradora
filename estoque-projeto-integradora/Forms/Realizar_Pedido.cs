@@ -32,5 +32,6 @@ namespace estoque_projeto_integradora.Forms
                 txtPrecoPedido.Text = total.ToString() ;
             }
         }
+
     }
 }
