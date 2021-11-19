@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace estoque_projeto_integradora.Forms
 {
-    public partial class Cadastrar_Cliente : Form
+    public partial class Cadastrar_Fornecedor : Form
     {
-        public Cadastrar_Cliente()
+        public Cadastrar_Fornecedor()
         {
             InitializeComponent();
-        }
-
-        private void Cadastrar_Cliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -42,6 +42,15 @@ namespace estoque_projeto_integradora
         {
             panelCadastrar.Visible = false;
             painelExcluir.Visible = false;
+            panelAlterar.Visible = false;
+
+        }
+
+        private void fecharFormButton()
+        {
+            if (activateForm != null)
+                activateForm.Close();
+            Reset();
         }
         private Color SelectThemeColor()
         {
@@ -71,6 +80,7 @@ namespace estoque_projeto_integradora
                     panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     panelCadastrar.BackColor = color;
                     painelExcluir.BackColor = color;
+                    panelAlterar.BackColor = color;
                     ThemeColor.PrimeiraCor = color;
                     ThemeColor.SegundaCor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btnFechaChildForms.Visible = true;
@@ -113,23 +123,27 @@ namespace estoque_projeto_integradora
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.Cadastrar_Setor(), sender);
+            OpenChildForm(new Forms.Realizar_Pedido(), sender);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            fecharFormButton();
             visiblePanel();
             ActivateButton(sender);
             panelCadastrar.Visible = true;
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            fecharFormButton();
             visiblePanel();
-            //OpenChildForm(new Forms.Alterar(), sender);
+            ActivateButton(sender);
+            panelAlterar.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            fecharFormButton();
             visiblePanel();
             ActivateButton(sender);
             painelExcluir.Visible = true;
@@ -137,14 +151,16 @@ namespace estoque_projeto_integradora
 
         private void button4_Click(object sender, EventArgs e)
         {
+            fecharFormButton();
             visiblePanel();
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Pesquisar(), sender);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            fecharFormButton();
             visiblePanel();
-            ActivateButton(sender);
+            OpenChildForm(new Forms.Relatorio(), sender);
         }
 
         private void btnFechaChildForms_Click(object sender, EventArgs e)
@@ -216,7 +232,7 @@ namespace estoque_projeto_integradora
         private void cadCliente_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.X(), sender);
+            OpenChildForm(new Forms.Cadastrar_Cliente(), sender);
         }
 
         private void cadaFornecedor_Click(object sender, EventArgs e)
@@ -239,6 +255,29 @@ namespace estoque_projeto_integradora
 
         }
 
-        
+        private void AltCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AltFornecedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlterarFuncionario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlterarProduto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AlterarSetor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
