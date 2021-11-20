@@ -32,5 +32,13 @@ namespace estoque_projeto_integradora.Classes
             connection.Disconnect();
             return connection.ds;
         }
+        public DataSet ListNumLote()
+        {
+            string sql = "Select * from Estoque";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
     }
 }

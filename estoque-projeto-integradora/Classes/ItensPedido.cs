@@ -14,12 +14,12 @@ namespace estoque_projeto_integradora.Classes
         public int IdPedido { get; set; }
         public int IdEstoque { get; set; }
         public int QuantidadeItensPedido { get; set; }
-        public Decimal TotalPedido { get; set; }
+        public Decimal PrecoItensPedido { get; set; }
 
 
         public void InsertItensPedido()
         {
-            string sql = $"Insert into Itens_Pedidos (IdItensPedidos, IdPedido, IdEstoque, QuantidadeItensPedido, TotalPedido) values ('{IdItensPedidos}', '{IdPedido}', '{IdEstoque}', '{QuantidadeItensPedido}', '{TotalPedido}')";
+            string sql = $"Insert into Itens_Pedidos (IdItensPedidos, IdPedido, IdEstoque, QuantidadeItensPedido, TotalPedido) values ('{IdItensPedidos}', '{IdPedido}', '{IdEstoque}', '{QuantidadeItensPedido}', '{PrecoItensPedido}')";
             connection.Execute(sql);
         }
     }

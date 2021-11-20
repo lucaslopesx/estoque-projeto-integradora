@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace estoque_projeto_integradora.Classes
@@ -21,6 +22,15 @@ namespace estoque_projeto_integradora.Classes
         {
             string sql = $"Insert into Pedidos (DataPedido, Preco, IdFuncionario, IdCliente) values ('{DataPedido}', '{Preco}', '{IdFuncionario}', '{IdCliente}')";
             connection.Execute(sql);
+        }
+
+        public object getLastIdPedido()
+        {
+            string sql = "select top 1 * from pedidos order by idPedido desc";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds.Tables[0].Rows[0].ItemArray[0];
         }
     }
 }

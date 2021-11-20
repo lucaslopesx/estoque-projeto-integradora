@@ -35,7 +35,7 @@ namespace estoque_projeto_integradora.Forms
             this.txtPrecoProduto = new System.Windows.Forms.TextBox();
             this.cbProduto = new System.Windows.Forms.ComboBox();
             this.cmdFinalizar = new System.Windows.Forms.Button();
-            this.txtqtd = new System.Windows.Forms.NumericUpDown();
+            this.nudQtdItensPedido = new System.Windows.Forms.NumericUpDown();
             this.verificar_preco = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
@@ -55,7 +55,9 @@ namespace estoque_projeto_integradora.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cmdIniciarPedido = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.txtqtd)).BeginInit();
+            this.cbNumLote = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQtdItensPedido)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +103,7 @@ namespace estoque_projeto_integradora.Forms
             this.cbProduto.Name = "cbProduto";
             this.cbProduto.Size = new System.Drawing.Size(243, 33);
             this.cbProduto.TabIndex = 63;
+            this.cbProduto.SelectedIndexChanged += new System.EventHandler(this.cbProduto_SelectedIndexChanged);
             // 
             // cmdFinalizar
             // 
@@ -115,21 +118,21 @@ namespace estoque_projeto_integradora.Forms
             this.cmdFinalizar.UseVisualStyleBackColor = true;
             this.cmdFinalizar.Click += new System.EventHandler(this.cmdConfirmar_Click);
             // 
-            // txtqtd
+            // nudQtdItensPedido
             // 
-            this.txtqtd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtqtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtqtd.Location = new System.Drawing.Point(179, 315);
-            this.txtqtd.Margin = new System.Windows.Forms.Padding(2);
-            this.txtqtd.Minimum = new decimal(new int[] {
+            this.nudQtdItensPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.nudQtdItensPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQtdItensPedido.Location = new System.Drawing.Point(179, 315);
+            this.nudQtdItensPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.nudQtdItensPedido.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.txtqtd.Name = "txtqtd";
-            this.txtqtd.Size = new System.Drawing.Size(72, 29);
-            this.txtqtd.TabIndex = 67;
-            this.txtqtd.Value = new decimal(new int[] {
+            this.nudQtdItensPedido.Name = "nudQtdItensPedido";
+            this.nudQtdItensPedido.Size = new System.Drawing.Size(72, 29);
+            this.nudQtdItensPedido.TabIndex = 67;
+            this.nudQtdItensPedido.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -331,11 +334,34 @@ namespace estoque_projeto_integradora.Forms
             this.cmdIniciarPedido.UseVisualStyleBackColor = true;
             this.cmdIniciarPedido.Click += new System.EventHandler(this.cmdIniciarPedido_Click);
             // 
+            // cbNumLote
+            // 
+            this.cbNumLote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbNumLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNumLote.FormattingEnabled = true;
+            this.cbNumLote.Location = new System.Drawing.Point(294, 198);
+            this.cbNumLote.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNumLote.Name = "cbNumLote";
+            this.cbNumLote.Size = new System.Drawing.Size(167, 33);
+            this.cbNumLote.TabIndex = 87;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(290, 173);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(141, 24);
+            this.label11.TabIndex = 88;
+            this.label11.Text = "Numero do lote";
+            // 
             // Realizar_Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 548);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbNumLote);
             this.Controls.Add(this.cmdIniciarPedido);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cmdAddProduto);
@@ -347,7 +373,7 @@ namespace estoque_projeto_integradora.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.verificar_preco);
-            this.Controls.Add(this.txtqtd);
+            this.Controls.Add(this.nudQtdItensPedido);
             this.Controls.Add(this.cmdFinalizar);
             this.Controls.Add(this.cbProduto);
             this.Controls.Add(this.cbFuncionario);
@@ -360,7 +386,7 @@ namespace estoque_projeto_integradora.Forms
             this.Name = "Realizar_Pedido";
             this.Text = "Realizar_Pedido";
             this.Load += new System.EventHandler(this.Realizar_Pedido_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtqtd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQtdItensPedido)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
@@ -376,7 +402,7 @@ namespace estoque_projeto_integradora.Forms
         private System.Windows.Forms.TextBox txtPrecoProduto;
         private System.Windows.Forms.ComboBox cbProduto;
         private System.Windows.Forms.Button cmdFinalizar;
-        private System.Windows.Forms.NumericUpDown txtqtd;
+        private System.Windows.Forms.NumericUpDown nudQtdItensPedido;
         private System.Windows.Forms.Button verificar_preco;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
@@ -396,5 +422,7 @@ namespace estoque_projeto_integradora.Forms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button cmdIniciarPedido;
+        private System.Windows.Forms.ComboBox cbNumLote;
+        private System.Windows.Forms.Label label11;
     }
 }
