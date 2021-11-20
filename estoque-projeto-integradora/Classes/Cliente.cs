@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -21,6 +22,14 @@ namespace estoque_projeto_integradora.Classes
         {
             string sql = $"Insert into Cliente (cpfCliente, nomeCliente, enderecoCliente, telefoneCliente) values ('{CpfCliente}', '{NomeCliente}', '{EnderecoCliente}', '{TelefoneCliente}')";
             connection.Execute(sql);
+        }
+        public DataSet List()
+        {
+            string sql = "Select * from Cliente";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
         }
     }
 }

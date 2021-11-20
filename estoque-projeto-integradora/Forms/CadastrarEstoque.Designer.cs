@@ -86,7 +86,7 @@ namespace estoque_projeto_integradora.Forms
             this.cmdCadastrar.TabIndex = 52;
             this.cmdCadastrar.Text = "Cadastrar Estoque ";
             this.cmdCadastrar.UseVisualStyleBackColor = true;
-            this.cmdCadastrar.Click += new System.EventHandler(this.button1_Click);
+            this.cmdCadastrar.Click += new System.EventHandler(this.cmdCadastrar_Click);
             // 
             // label6
             // 
@@ -115,7 +115,7 @@ namespace estoque_projeto_integradora.Forms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(200, 201);
+            this.label2.Location = new System.Drawing.Point(257, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 29);
             this.label2.TabIndex = 55;
@@ -130,14 +130,14 @@ namespace estoque_projeto_integradora.Forms
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(180, 29);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Numero do lote";
+            this.label3.Text = "Número do lote";
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(216, 386);
+            this.label4.Location = new System.Drawing.Point(216, 389);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 29);
             this.label4.TabIndex = 57;
@@ -158,7 +158,7 @@ namespace estoque_projeto_integradora.Forms
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(205, 228);
+            this.dateTimePicker1.Location = new System.Drawing.Point(262, 229);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(188, 35);
             this.dateTimePicker1.TabIndex = 59;

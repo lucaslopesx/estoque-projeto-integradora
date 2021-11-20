@@ -24,5 +24,6 @@ namespace estoque_projeto_integradora.Classes
         }
 
 
+
     }
 }

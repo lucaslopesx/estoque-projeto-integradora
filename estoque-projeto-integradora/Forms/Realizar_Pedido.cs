@@ -15,6 +15,12 @@ namespace estoque_projeto_integradora.Forms
         int quantidade;
         float preco;
         float total;
+        int i;
+
+        Classes.Produto dataProduto = new Classes.Produto();
+        Classes.Cliente dataCliente = new Classes.Cliente();
+        Classes.Funcionario dataFuncionario = new Classes.Funcionario();
+        Classes.Pedidos dataPedido = new Classes.Pedidos();
         public Realizar_Pedido()
         {
             InitializeComponent();
@@ -33,5 +39,41 @@ namespace estoque_projeto_integradora.Forms
             }
         }
 
+        private void cmdAddProduto_Click(object sender, EventArgs e)
+        {
+            i++;
+        }
+
+        private void Realizar_Pedido_Load(object sender, EventArgs e)
+        {
+            cbCliente.DisplayMember = "nomeCliente";
+            cbCliente.ValueMember = "idCliente";
+            cbCliente.DataSource = dataCliente.List().Tables[0];
+            cbCliente.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cbFuncionario.DisplayMember = "nomeFuncionario";
+            cbFuncionario.ValueMember = "idFuncionario";
+            cbFuncionario.DataSource = dataFuncionario.List().Tables[0];
+            cbFuncionario.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            cbProduto.DisplayMember = "nomeProduto";
+            cbProduto.ValueMember = "idProduto";
+            cbProduto.DataSource = dataProduto.List().Tables[0];
+            cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void cmdConfirmar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdIniciarPedido_Click(object sender, EventArgs e)
+        {
+            dataPedido.DataPedido = dateTimePicker1.Value.ToString();
+            dataPedido.Preco = 0;
+            dataPedido.IdFuncionario = int.Parse(cbFuncionario.SelectedValue.ToString());
+            dataPedido.IdCliente = int.Parse(cbCliente.SelectedValue.ToString());
+            dataPedido.InsertPedido();
+        }
     }
 }

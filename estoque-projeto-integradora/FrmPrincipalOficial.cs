@@ -285,5 +285,16 @@ namespace estoque_projeto_integradora
         {
 
         }
+
+        private void cadEstoque_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            visiblePanel();
+            OpenChildForm(new Forms.CadastrarEstoque(), sender);
+        }
     }
 }

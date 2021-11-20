@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,6 +24,15 @@ namespace estoque_projeto_integradora.Classes
         {
             string sql = $"Insert into Funcionario (cpfFuncionario, nomeFuncionario, dataNascFuncionario, enderecoFuncionario, telefoneFuncionario, cargoFuncionario) values ('{CpfFuncionario}', '{NomeFuncionario}', '{DataNascFuncionario}', '{EnderecoFuncionario}', '{TelefoneFuncionario}', '{CargoFuncionario}')";
             connection.Execute(sql);
+        }
+
+        public DataSet List()
+        {
+            string sql = "Select * from Funcionario";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
         }
     }
 }
