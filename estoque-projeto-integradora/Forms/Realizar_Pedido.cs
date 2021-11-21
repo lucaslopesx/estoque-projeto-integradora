@@ -12,9 +12,9 @@ namespace estoque_projeto_integradora.Forms
 {
     public partial class Realizar_Pedido : Form
     {
-        int quantidade;
-        float preco;
-        float total;
+        //int quantidade;
+        //float preco;
+        //float total;
         int i;
 
         Classes.Produto dataProduto = new Classes.Produto();
@@ -24,22 +24,11 @@ namespace estoque_projeto_integradora.Forms
         Classes.ItensPedido dataItensPedido = new Classes.ItensPedido();
         Classes.Estoque dataEstoque = new Classes.Estoque();
         Classes.Geral dataGeral = new Classes.Geral();
+        Classes.Pagamento dataPagamento = new Classes.Pagamento();
+        Classes.Parcelas dataParcelas = new Classes.Parcelas();
         public Realizar_Pedido()
         {
             InitializeComponent();
-        }
-
-        private void verificar_preco_Click(object sender, EventArgs e)
-        {
-            if (txtPrecoProduto.Text == "")
-                MessageBox.Show("Escolha um produto.");
-            else
-            {
-                preco = float.Parse(txtPrecoProduto.Text);
-                quantidade = int.Parse(nudQtdItensPedido.Text);
-                total = preco * quantidade;
-                txtPrecoPedido.Text = total.ToString() ;
-            }
         }
         private void cmdIniciarPedido_Click(object sender, EventArgs e)
         {
@@ -51,21 +40,37 @@ namespace estoque_projeto_integradora.Forms
 
             cbProduto.DisplayMember = "nomeProduto";
             cbProduto.ValueMember = "idProduto";
-            cbProduto.DataSource = dataGeral.ListProdutoENumLote().Tables[0];
+            cbProduto.DataSource = dataProduto.List().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            panel3.Visible = false;
 
 
         }
         private void cbProduto_SelectedIndexChanged(object sender, EventArgs e)
         {
             dataGeral.IdProduto = int.Parse(cbProduto.SelectedValue.ToString());
+            dataProduto.IdProduto = int.Parse(cbProduto.SelectedValue.ToString());
 
             cbNumLote.DisplayMember = "numeroLote";
             cbNumLote.ValueMember = "idEstoque";
             cbNumLote.DataSource = dataGeral.ListNumeroLote().Tables[0];
             cbNumLote.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            dataProduto.Consult();
+            txtPrecoProduto.Text = dataProduto.PrecoProduto.ToString();
         }
-        
+        /*private void nudQtdItensPedido_ValueChanged(object sender, EventArgs e)
+        {
+            preco = float.Parse(txtPrecoProduto.Text);
+            quantidade = int.Parse(nudQtdItensPedido.Text);
+            total = preco * quantidade;
+            txtPrecoPedido.Text = total.ToString();
+        }*/
+        private void cbNumLote_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dataItensPedido.IdEstoque = int.Parse(cbNumLote.SelectedValue.ToString());
+        }
 
         private void cmdAddProduto_Click(object sender, EventArgs e)
         {
@@ -73,7 +78,24 @@ namespace estoque_projeto_integradora.Forms
             dataItensPedido.PrecoItensPedido = Decimal.Parse(txtPrecoProduto.Text);
             dataItensPedido.QuantidadeItensPedido = int.Parse(nudQtdItensPedido.Value.ToString());
             dataItensPedido.IdPedido = int.Parse(dataPedido.getLastIdPedido().ToString());
+            dataPedido.IdPedido = int.Parse(dataPedido.getLastIdPedido().ToString());
+            dataPagamento.IdPedido = int.Parse(dataPedido.getLastIdPedido().ToString());
 
+
+            dataItensPedido.InsertItensPedido();
+
+            dataGridView1.DataSource = dataGeral.ListItensNomeProduto(i).Tables[0];
+
+            dataPedido.ConsultPrecoPedido();
+            txtPrecoPedido.Text = "R$" + dataPedido.Preco.ToString();
+
+            cmdFinalizar.Enabled = true;
+
+        }
+        private void cmdConfirmar_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            txtVALORFINAL.Text = "R$" + dataPedido.Preco.ToString();
         }
 
         private void Realizar_Pedido_Load(object sender, EventArgs e)
@@ -96,11 +118,36 @@ namespace estoque_projeto_integradora.Forms
             */
         }
 
-        private void cmdConfirmar_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (cbFormaPag.SelectedItem == "Crediário") 
+            {
+                dataPagamento.QuantidadeParcela = int.Parse(cbParcelas.SelectedItem.ToString());
+            }
+            dataPagamento.FormaPagamento = cbFormaPag.SelectedItem.ToString();
+            dataPagamento.PrecoTotal = dataPedido.Preco.ToString();
+            dataPagamento.InsertPagamento();
+            if (cbFormaPag.SelectedItem == "Crediário")
+            {
+                dataPagamento.ConsultLastIdPagamento();
+                dataParcelas.IdPagamento = dataPagamento.IdPagamento;
+                dataParcelas.InsertParcelas(dataPagamento.QuantidadeParcela, Decimal.Parse(dataPedido.Preco.ToString("#0,00")));
+            }
         }
 
-        
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbFormaPag.SelectedItem == "Crediário")
+            {
+                cbParcelas.Visible = true;
+                label9.Visible = true;
+            }
+            else
+            {
+                cbParcelas.Visible = false;
+                label9.Visible = false;
+                dataPagamento.QuantidadeParcela = 0;
+            }
+        }
     }
 }

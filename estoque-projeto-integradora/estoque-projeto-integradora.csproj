@@ -53,6 +53,8 @@
     <Compile Include="Classes\Funcionario.cs" />
     <Compile Include="Classes\Geral.cs" />
     <Compile Include="Classes\ItensPedido.cs" />
+    <Compile Include="Classes\Pagamento.cs" />
+    <Compile Include="Classes\Parcelas.cs" />
     <Compile Include="Classes\Pedidos.cs" />
     <Compile Include="Classes\Produto.cs" />
     <Compile Include="Classes\Setor.cs" />

@@ -20,7 +20,7 @@ namespace estoque_projeto_integradora.Classes
 
         public void InsertPedido()
         {
-            string sql = $"Insert into Pedidos (DataPedido, Preco, IdFuncionario, IdCliente) values ('{DataPedido}', '{Preco}', '{IdFuncionario}', '{IdCliente}')";
+            string sql = $"Insert into Pedidos (DataPedido, Preco, IdFuncionario, IdCliente) values ('{DataPedido}', '{Preco.ToString().Replace(',', '.')}', '{IdFuncionario}', '{IdCliente}')";
             connection.Execute(sql);
         }
 
@@ -31,6 +31,18 @@ namespace estoque_projeto_integradora.Classes
 
             connection.Disconnect();
             return connection.ds.Tables[0].Rows[0].ItemArray[0];
+        }
+
+        public void ConsultPrecoPedido()
+        {
+            string sql = $"Select * from Pedidos where idPedido = {IdPedido}";
+
+            connection.Consult(sql);
+            if (connection.dr.Read())
+            {
+                Preco = Decimal.Parse(connection.dr["preco"].ToString());
+            }
+            connection.Disconnect();
         }
     }
 }
