@@ -16,5 +16,26 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
+        Classes.Funcionario dataFunc = new Classes.Funcionario();
+        private void cmdCadastrar_Click(object sender, EventArgs e)
+        {
+            dataFunc.CpfFuncionario = txtCpf.Text;
+            dataFunc.NomeFuncionario = txtNomeFunc.Text;
+            dataFunc.DataNascFuncionario = txtDataNasc.Text;
+            dataFunc.EnderecoFuncionario = txtEndereco.Text;
+            dataFunc.TelefoneFuncionario = txtTelefone.Text;
+            dataFunc.CargoFuncionario = txtCargo.Text;
+
+            dataFunc.InsertFuncionario();
+
+            txtCargo.Text = "";
+            txtCpf.Text = "";
+            txtDataNasc.Text = "";
+            txtEndereco.Text = "";
+            txtNomeFunc.Text = "";
+            txtTelefone.Text = "";
+
+            MessageBox.Show("Funcionario inserido com sucesso");
+        }
     }
 }

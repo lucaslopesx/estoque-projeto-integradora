@@ -16,10 +16,35 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        Classes.Estoque dataEstoque = new Classes.Estoque();
+        Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
+        Classes.Produto dataProduto = new Classes.Produto();
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            Close();
+            MessageBox.Show("The selected value is " + dateTimePicker1.Text);
+        }
+
+        private void CadastrarEstoque_Load(object sender, EventArgs e)
+        {
+            cbFornecedor.DisplayMember = "nomeFornecedor";
+            cbFornecedor.ValueMember = "idFornecedor";
+            cbFornecedor.DataSource = dataFornecedor.List().Tables[0];
+            cbFornecedor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbProduto.DisplayMember = "nomeProduto";
+            cbProduto.ValueMember = "idProduto";
+            cbProduto.DataSource = dataProduto.List().Tables[0];
+            cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+
+        private void cmdCadastrar_Click(object sender, EventArgs e)
+        {
+            dataEstoque.QtdEstoque = int.Parse(nudQuantidade.Value.ToString());
+            dataEstoque.DataValEstoque = dateTimePicker1.Text;
+            dataEstoque.NumeroLote = txtNumLote.Text;
+            dataEstoque.IdFornecedor = int.Parse(cbFornecedor.SelectedValue.ToString());
+            dataEstoque.IdProduto = int.Parse(cbProduto.SelectedValue.ToString());
+
+            dataEstoque.InsertEstoque();
         }
     }
 }

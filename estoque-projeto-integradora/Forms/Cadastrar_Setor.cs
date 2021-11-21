@@ -16,5 +16,14 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
+        Classes.Setor dataSetor = new Classes.Setor();
+        private void cmdCadastrar_Click(object sender, EventArgs e)
+        {
+            dataSetor.NomeSetor = txtNomeSetor.Text;
+            dataSetor.InsertSetor();
+
+            txtNomeSetor.Text = "";
+            MessageBox.Show("Setor incluído com sucesso");
+        }
     }
 }
