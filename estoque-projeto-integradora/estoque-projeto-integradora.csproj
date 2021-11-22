@@ -58,6 +58,36 @@
     <Compile Include="Classes\Pedidos.cs" />
     <Compile Include="Classes\Produto.cs" />
     <Compile Include="Classes\Setor.cs" />
+    <Compile Include="Forms\AlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AlterarProduto.Designer.cs">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alterar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alterar_Cliente.Designer.cs">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alterar_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alterar_Estoque.Designer.cs">
+      <DependentUpon>Alterar_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alterar_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alterar_Fornecedor.Designer.cs">
+      <DependentUpon>Alterar_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alterar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alterar_Funcionario.Designer.cs">
+      <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Cadastrar_Setor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +124,30 @@
     <Compile Include="Forms\Cadastrar_Produto.Designer.cs">
       <DependentUpon>Cadastrar_Produto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Excluir_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excluir_Cliente.Designer.cs">
+      <DependentUpon>Excluir_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excluir_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excluir_Estoque.Designer.cs">
+      <DependentUpon>Excluir_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excluir_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excluir_Fornecedor.Designer.cs">
+      <DependentUpon>Excluir_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Excluir_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Excluir_Funcionario.Designer.cs">
+      <DependentUpon>Excluir_Funcionario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Pesquisar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +175,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Forms\AlterarProduto.resx">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alterar_Cliente.resx">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alterar_Estoque.resx">
+      <DependentUpon>Alterar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alterar_Fornecedor.resx">
+      <DependentUpon>Alterar_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alterar_Funcionario.resx">
+      <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastrar_Setor.resx">
       <DependentUpon>Cadastrar_Setor.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +207,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Cadastrar_Produto.resx">
       <DependentUpon>Cadastrar_Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excluir_Cliente.resx">
+      <DependentUpon>Excluir_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excluir_Estoque.resx">
+      <DependentUpon>Excluir_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excluir_Fornecedor.resx">
+      <DependentUpon>Excluir_Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Excluir_Funcionario.resx">
+      <DependentUpon>Excluir_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Pesquisar.resx">
       <DependentUpon>Pesquisar.cs</DependentUpon>
@@ -209,6 +290,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\prateleiras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\semfoto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GLMCONTROLL.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
