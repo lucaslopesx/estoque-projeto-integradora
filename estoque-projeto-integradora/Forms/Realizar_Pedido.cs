@@ -131,7 +131,7 @@ namespace estoque_projeto_integradora.Forms
             {
                 dataPagamento.ConsultLastIdPagamento();
                 dataParcelas.IdPagamento = dataPagamento.IdPagamento;
-                dataParcelas.InsertParcelas(dataPagamento.QuantidadeParcela, Decimal.Parse(dataPedido.Preco.ToString("#0,00")));
+                dataParcelas.InsertParcelas(dataPagamento.QuantidadeParcela, Decimal.Parse(dataPedido.Preco.ToString()));
             }
         }
 
