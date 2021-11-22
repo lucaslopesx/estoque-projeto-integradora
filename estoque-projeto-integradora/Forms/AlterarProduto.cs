@@ -20,7 +20,7 @@ namespace estoque_projeto_integradora.Forms
         }
         Classes.Produto dados = new Classes.Produto();
         Classes.Setor dadosSetor = new Classes.Setor();
-        private void AlterarProduto_Load(object sender, EventArgs e)
+        public void carregar()
         {
             cbnomeProd.DisplayMember = "nomeProduto";
             cbnomeProd.ValueMember = "idProduto";
@@ -28,6 +28,10 @@ namespace estoque_projeto_integradora.Forms
             cbSetor.DisplayMember = "nomeSetor";
             cbSetor.ValueMember = "idSetor";
             cbSetor.DataSource = dadosSetor.List().Tables[0];
+        }
+        private void AlterarProduto_Load(object sender, EventArgs e)
+        {
+            carregar();
         }
 
         private void cbnomeProd_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,7 +44,7 @@ namespace estoque_projeto_integradora.Forms
                 ms.Write(dados.FotoProduto, 0, dados.FotoProduto.Length);
                 pictureBox1.Image = Image.FromStream(ms);
             }
-            txtPreco.Text = dados.PrecoProduto.ToString("");
+            txtPreco.Text = dados.PrecoProduto.ToString();
             txtDesc.Text = dados.DescProduto.ToString();
             cbSetor.Text = dados.nomeSetor;
         }

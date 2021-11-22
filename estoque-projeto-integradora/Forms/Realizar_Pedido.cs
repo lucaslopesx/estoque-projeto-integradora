@@ -16,7 +16,7 @@ namespace estoque_projeto_integradora.Forms
         //float preco;
         //float total;
         int i;
-
+        FrmPrincipalOficial x = new FrmPrincipalOficial();
         Classes.Produto dataProduto = new Classes.Produto();
         Classes.Cliente dataCliente = new Classes.Cliente();
         Classes.Funcionario dataFuncionario = new Classes.Funcionario();

@@ -147,9 +147,9 @@ namespace estoque_projeto_integradora.Forms
             this.cmdexcluir.Margin = new System.Windows.Forms.Padding(4);
             this.cmdexcluir.MaximumSize = new System.Drawing.Size(196, 85);
             this.cmdexcluir.Name = "cmdexcluir";
-            this.cmdexcluir.Size = new System.Drawing.Size(196, 85);
+            this.cmdexcluir.Size = new System.Drawing.Size(196, 0);
             this.cmdexcluir.TabIndex = 75;
-            this.cmdexcluir.Text = "Alterar estoque";
+            this.cmdexcluir.Text = "Excluir";
             this.cmdexcluir.UseVisualStyleBackColor = true;
             this.cmdexcluir.Click += new System.EventHandler(this.cmdexcluir_Click);
             // 
@@ -189,7 +189,7 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 846);
+            this.ClientSize = new System.Drawing.Size(919, 719);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstoque);
             this.Controls.Add(this.label1);

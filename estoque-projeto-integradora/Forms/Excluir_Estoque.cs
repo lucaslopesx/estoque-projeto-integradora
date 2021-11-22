@@ -19,7 +19,7 @@ namespace estoque_projeto_integradora.Forms
         private Classes.Estoque dataEstoque = new Classes.Estoque();
         private Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
         private Classes.Produto dataProduto = new Classes.Produto();
-        private void Excluir_Estoque_Load(object sender, EventArgs e)
+        public void carregarCombo()
         {
             cbEstoque.DisplayMember = ("idEstoque").ToString();
             cbEstoque.ValueMember = "idEstoque";
@@ -32,6 +32,10 @@ namespace estoque_projeto_integradora.Forms
             cbProduto.ValueMember = "idProduto";
             cbProduto.DataSource = dataProduto.List().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void Excluir_Estoque_Load(object sender, EventArgs e)
+        {
+            carregarCombo();
         }
 
         private void cbEstoque_SelectedIndexChanged(object sender, EventArgs e)
@@ -48,7 +52,9 @@ namespace estoque_projeto_integradora.Forms
         private void cmdexcluir_Click(object sender, EventArgs e)
         {
             dataEstoque.Excluir();
-            MessageBox.Show("Registro excluido com sucesso!");
+            MessageBox.Show("Estoque excluido com sucesso!");
+            carregarCombo();
+
         }
     }
 }

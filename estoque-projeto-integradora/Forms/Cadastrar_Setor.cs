@@ -21,9 +21,9 @@ namespace estoque_projeto_integradora.Forms
         {
             dataSetor.NomeSetor = txtNomeSetor.Text;
             dataSetor.InsertSetor();
-
             txtNomeSetor.Text = "";
             MessageBox.Show("Setor incluído com sucesso");
+            txtNomeSetor.Clear();
         }
     }
 }
