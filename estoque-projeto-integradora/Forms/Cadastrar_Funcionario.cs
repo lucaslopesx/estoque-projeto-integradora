@@ -21,7 +21,7 @@ namespace estoque_projeto_integradora.Forms
         {
             dataFunc.CpfFuncionario = txtCpf.Text;
             dataFunc.NomeFuncionario = txtNomeFunc.Text;
-            dataFunc.DataNascFuncionario = txtDataNasc.Text;
+            dataFunc.DataNascFuncionario = dateTimePicker1.Text;
             dataFunc.EnderecoFuncionario = txtEndereco.Text;
             dataFunc.TelefoneFuncionario = txtTelefone.Text;
             dataFunc.CargoFuncionario = txtCargo.Text;
@@ -30,7 +30,7 @@ namespace estoque_projeto_integradora.Forms
             MessageBox.Show("Funcionario inserido com sucesso");
             txtCargo.Text = "";
             txtCpf.Text = "";
-            txtDataNasc.Text = "";
+            dateTimePicker1.Text = "";
             txtEndereco.Text = "";
             txtNomeFunc.Text = "";
             txtTelefone.Text = "";

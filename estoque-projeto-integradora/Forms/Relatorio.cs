@@ -112,11 +112,11 @@ namespace estoque_projeto_integradora.Forms
 
             if (contador > linhaPorPagina)
             {
-                ev.HasMorePages = false;
+                ev.HasMorePages = true;
             }
             else
             {
-                ev.HasMorePages = true;
+                ev.HasMorePages = false;
             }
         }
 

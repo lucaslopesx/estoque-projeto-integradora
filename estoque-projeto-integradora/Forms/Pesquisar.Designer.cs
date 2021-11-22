@@ -31,7 +31,6 @@ namespace estoque_projeto_integradora.Forms
         {
             this.cmdPesquisar = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtBusca = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -40,7 +39,7 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.cmdPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmdPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPesquisar.Location = new System.Drawing.Point(606, 9);
+            this.cmdPesquisar.Location = new System.Drawing.Point(493, 9);
             this.cmdPesquisar.MaximumSize = new System.Drawing.Size(137, 45);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(137, 45);
@@ -51,6 +50,7 @@ namespace estoque_projeto_integradora.Forms
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
@@ -61,23 +61,15 @@ namespace estoque_projeto_integradora.Forms
             "Pedidos",
             "Produto",
             "Setor"});
-            this.comboBox1.Location = new System.Drawing.Point(106, 14);
+            this.comboBox1.Location = new System.Drawing.Point(214, 14);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 37);
+            this.comboBox1.Size = new System.Drawing.Size(250, 37);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // txtBusca
-            // 
-            this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(300, 14);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(291, 35);
-            this.txtBusca.TabIndex = 3;
-            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
@@ -93,7 +85,6 @@ namespace estoque_projeto_integradora.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(854, 554);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cmdPesquisar);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -101,7 +92,6 @@ namespace estoque_projeto_integradora.Forms
             this.Text = "Pesquisar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -109,7 +99,6 @@ namespace estoque_projeto_integradora.Forms
 
         private System.Windows.Forms.Button cmdPesquisar;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

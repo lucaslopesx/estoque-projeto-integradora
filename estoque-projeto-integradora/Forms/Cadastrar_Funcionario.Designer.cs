@@ -33,7 +33,6 @@ namespace estoque_projeto_integradora.Forms
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNomeFunc = new System.Windows.Forms.TextBox();
-            this.txtDataNasc = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace estoque_projeto_integradora.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // cmdCadastrar
@@ -83,15 +83,6 @@ namespace estoque_projeto_integradora.Forms
             this.txtNomeFunc.Name = "txtNomeFunc";
             this.txtNomeFunc.Size = new System.Drawing.Size(197, 35);
             this.txtNomeFunc.TabIndex = 22;
-            // 
-            // txtDataNasc
-            // 
-            this.txtDataNasc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNasc.Location = new System.Drawing.Point(393, 69);
-            this.txtDataNasc.Name = "txtDataNasc";
-            this.txtDataNasc.Size = new System.Drawing.Size(242, 35);
-            this.txtDataNasc.TabIndex = 26;
             // 
             // txtEndereco
             // 
@@ -177,14 +168,25 @@ namespace estoque_projeto_integradora.Forms
             this.label6.TabIndex = 108;
             this.label6.Text = "Cargo";
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(393, 73);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(242, 35);
+            this.dateTimePicker1.TabIndex = 109;
+            // 
             // Cadastrar_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(728, 490);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.txtDataNasc);
             this.Controls.Add(this.cmdCadastrar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtCpf);
@@ -209,7 +211,6 @@ namespace estoque_projeto_integradora.Forms
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtNomeFunc;
-        private System.Windows.Forms.TextBox txtDataNasc;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label label3;
@@ -218,5 +219,6 @@ namespace estoque_projeto_integradora.Forms
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

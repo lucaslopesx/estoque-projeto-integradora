@@ -40,7 +40,7 @@ namespace estoque_projeto_integradora.Forms
 
             cbProduto.DisplayMember = "nomeProduto";
             cbProduto.ValueMember = "idProduto";
-            cbProduto.DataSource = dataProduto.List().Tables[0];
+            cbProduto.DataSource = dataProduto.ListNotIn().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
 
             panel3.Visible = false;

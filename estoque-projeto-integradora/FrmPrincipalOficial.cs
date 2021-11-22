@@ -214,7 +214,7 @@ namespace estoque_projeto_integradora
         private void ExcluProduto_Click(object sender, EventArgs e)
         {
             visiblePanel();
-            OpenChildForm(new Forms.CadastrarEstoque(), sender);
+            OpenChildForm(new Forms.Excluir_Estoque(), sender);
 
         }
         private void cadCliente_Click(object sender, EventArgs e)

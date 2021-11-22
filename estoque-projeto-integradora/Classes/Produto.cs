@@ -37,6 +37,14 @@ namespace estoque_projeto_integradora.Classes
             connection.Disconnect();
             return connection.ds;
         }
+        public DataSet ListNotIn()
+        {
+            string sql = "select p.idProduto, p.nomeProduto from Produto p where p.idProduto in (select p.idProduto from Produto p inner join Estoque e on p.idProduto = e.idProduto)";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
 
         public void Consult()
         {
