@@ -208,7 +208,8 @@ namespace estoque_projeto_integradora
 
         private void excluFunc_Click(object sender, EventArgs e)
         {
-
+            visiblePanel();
+            OpenChildForm(new Forms.Excluir_Funcionario(), sender);
         }
 
         private void ExcluProduto_Click(object sender, EventArgs e)
@@ -233,6 +234,7 @@ namespace estoque_projeto_integradora
 
         private void cadCliente_Click(object sender, EventArgs e)
         {
+            
             visiblePanel();
             OpenChildForm(new Forms.Cadastrar_Cliente(), sender);
         }
@@ -263,27 +265,28 @@ namespace estoque_projeto_integradora
 
         private void AltCliente_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.Alterar_Cliente(), sender);
         }
 
         private void AltFornecedor_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.Alterar_Fornecedor(), sender);
         }
 
         private void AlterarFuncionario_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.Alterar_Funcionario(), sender);
         }
 
         private void AlterarProduto_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Forms.AlterarProduto(), sender);
         }
 
         private void AlterarSetor_Click(object sender, EventArgs e)
         {
-
+            //alterarEstoque
+            OpenChildForm(new Forms.Alterar_Estoque(), sender);
         }
 
         private void cadEstoque_Click(object sender, EventArgs e)
@@ -295,6 +298,16 @@ namespace estoque_projeto_integradora
         {
             visiblePanel();
             OpenChildForm(new Forms.CadastrarEstoque(), sender);
+        }
+
+        private void ExclCliente_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Excluir_Cliente(), sender);
+        }
+
+        private void excluFornecedor_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.Excluir_Fornecedor(), sender);
         }
     }
 }

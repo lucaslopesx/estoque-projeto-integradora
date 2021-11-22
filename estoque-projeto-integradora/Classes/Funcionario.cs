@@ -25,6 +25,16 @@ namespace estoque_projeto_integradora.Classes
             string sql = $"Insert into Funcionario (cpfFuncionario, nomeFuncionario, dataNascFuncionario, enderecoFuncionario, telefoneFuncionario, cargoFuncionario) values ('{CpfFuncionario}', '{NomeFuncionario}', '{DataNascFuncionario}', '{EnderecoFuncionario}', '{TelefoneFuncionario}', '{CargoFuncionario}')";
             connection.Execute(sql);
         }
+        public void AlterarFuncionario()
+        {
+            string sql = $"Update Funcionario set cpfFuncionario = '{CpfFuncionario}',dataNascFuncionario = '{DataNascFuncionario}',enderecoFuncionario = '{EnderecoFuncionario}',telefoneFuncionario = '{TelefoneFuncionario}', cargoFuncionario = '{CargoFuncionario}' Where idFuncionario =" + IdFuncionario.ToString();
+            connection.Execute(sql);
+        }
+        public void Excluir()
+        {
+            string sql = $"Delete Funcionario where idFuncionario =  {IdFuncionario.ToString()}";
+            connection.Execute(sql);
+        }
 
         public DataSet List()
         {
@@ -33,6 +43,21 @@ namespace estoque_projeto_integradora.Classes
 
             connection.Disconnect();
             return connection.ds;
+        }
+        public void ConsultarDados()
+        {
+            string sql = $"Select * from Funcionario where idFuncionario = {IdFuncionario}";
+            connection.Consult(sql);
+
+            if (connection.dr.Read())
+            {
+                CpfFuncionario = connection.dr["cpfFuncionario"].ToString();
+                DataNascFuncionario = connection.dr["dataNascFuncionario"].ToString();
+                EnderecoFuncionario = connection.dr["enderecoFuncionario"].ToString();
+                CargoFuncionario = connection.dr["cargoFuncionario"].ToString();
+                TelefoneFuncionario = connection.dr["telefoneFuncionario"].ToString();
+            }
+            connection.Disconnect();
         }
     }
 }

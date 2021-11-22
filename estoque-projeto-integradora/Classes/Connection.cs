@@ -19,7 +19,8 @@ namespace estoque_projeto_integradora.Classes
 
         public void Connect()
         {
-            cn.ConnectionString = "SERVER = DESKTOP-GM7EVH8\\SQLEXPRESS; Database=Controle de estoque; UID=sa; PWD=1234;";
+            cn.ConnectionString = "SERVER = LAPTOP-PG3TNAT4\\SQLEXPRESS; Database=Controle de estoque; UID=sa; PWD=123;";
+            //cn.ConnectionString = "SERVER = DESKTOP-GM7EVH8\\SQLEXPRESS; Database=Controle de estoque; UID=sa; PWD=1234;";
             cn.Open();
 
         }
@@ -34,6 +35,21 @@ namespace estoque_projeto_integradora.Classes
             Connect();
             cd.Connection = cn;
             cd.CommandText = sql;
+            cd.ExecuteNonQuery();
+            Disconnect();
+        }
+
+        public void ExecuteFoto(string sql, byte[]foto)
+        {
+            Connect();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+            if (foto != null)
+            {
+                cd.Parameters.Clear();
+                cd.Parameters.Add("@BINARIO", SqlDbType.Image);
+                cd.Parameters["@BINARIO"].Value = foto;
+            }
             cd.ExecuteNonQuery();
             Disconnect();
         }

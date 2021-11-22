@@ -22,6 +22,16 @@ namespace estoque_projeto_integradora.Classes
             string sql = $"Insert into Fornecedor (cnpjFornecedor, nomeFornecedor, telefoneFornecedor) values ('{CnpjFornecedor}', '{NomeFornecedor}', '{TelefoneFornecedor}')";
             connection.Execute(sql);
         }
+        public void AlterFornecedor()
+        {
+            string sql = $"Update Fornecedor set cnpjFornecedor = '{CnpjFornecedor}',telefoneFornecedor = '{TelefoneFornecedor}', Where idFornecedor =" + IdFornecedor.ToString();
+            connection.Execute(sql);
+        }
+        public void Excluir()
+        {
+            string sql = $"Delete Fornecedor where idFornecedor = {IdFornecedor.ToString()}";
+            connection.Execute(sql);
+        }
         public DataSet List()
         {
             string sql = "Select * from Fornecedor";
@@ -29,6 +39,17 @@ namespace estoque_projeto_integradora.Classes
 
             connection.Disconnect();
             return connection.ds;
+        }
+        public void ConsultarDados()
+        {
+            string sql = $"Select * from Fornecedor where idFornecedor = {IdFornecedor}";
+            connection.Consult(sql);
+            if (connection.dr.Read())
+            {
+                CnpjFornecedor = connection.dr["cnpjFornecedor"].ToString();
+                TelefoneFornecedor = connection.dr["telefoneFornecedor"].ToString();
+            }
+            connection.Disconnect();
         }
     }
 }

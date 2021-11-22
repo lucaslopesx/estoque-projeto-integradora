@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace estoque_projeto_integradora.Forms
 {
@@ -41,7 +42,6 @@ namespace estoque_projeto_integradora.Forms
             dataProduto.NomeProduto = txtNomeProduto.Text;
             dataProduto.DescProduto = txtDesc.Text;
             dataProduto.PrecoProduto = Convert.ToDecimal(txtPreco.Text, CultureInfo.CurrentCulture);
-            dataProduto.FotoProduto = null;
             dataProduto.InsertProduto();
 
             /*dataEstoque.DataValEstoque = dateTimePicker1.Text.ToString();
@@ -52,6 +52,34 @@ namespace estoque_projeto_integradora.Forms
             dataEstoque.InsertEstoque();*/
 
 
+        }
+
+        private void cmdImg_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
+                ConverteFoto();
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.semfoto;
+                ConverteFoto();
+            }
+        }
+
+        private void ConverteFoto()
+        {
+            if (pictureBox1.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                byte[] fotoArray = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(fotoArray, 0, fotoArray.Length);
+                dataProduto.FotoProduto = fotoArray;
+            }
         }
     }
 }
