@@ -17,11 +17,15 @@ namespace estoque_projeto_integradora.Forms
             InitializeComponent();
         }
         Classes.Cliente dados = new Classes.Cliente();
-        private void Alterar_Cliente_Load(object sender, EventArgs e)
+        public void carregar()
         {
             comboboxnome.DisplayMember = "nomeCliente";
             comboboxnome.ValueMember = "idCliente";
             comboboxnome.DataSource = dados.List().Tables[0];
+        }
+        private void Alterar_Cliente_Load(object sender, EventArgs e)
+        {
+            carregar();
         }
 
         private void comboboxnome_SelectedIndexChanged(object sender, EventArgs e)
@@ -41,6 +45,7 @@ namespace estoque_projeto_integradora.Forms
             dados.NomeCliente = comboboxnome.Text;
             dados.AlterarCliente();
             MessageBox.Show("Registro alterado com sucesso!");
+            carregar();
         }
     }
 }

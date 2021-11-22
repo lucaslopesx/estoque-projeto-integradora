@@ -59,6 +59,7 @@ namespace estoque_projeto_integradora.Forms
             txtNomeProduto.Clear();
             txtDesc.Clear();
             txtPreco.Clear();
+            CarregarCombo();
 
             /*dataEstoque.DataValEstoque = dateTimePicker1.Text.ToString();
             dataEstoque.QtdEstoque = int.Parse(nudQuantidade.ToString());
