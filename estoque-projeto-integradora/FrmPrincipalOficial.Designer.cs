@@ -299,7 +299,7 @@ namespace estoque_projeto_integradora
             this.painelExcluir.Controls.Add(this.ExcluProduto);
             this.painelExcluir.Controls.Add(this.excluFunc);
             this.painelExcluir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelExcluir.Location = new System.Drawing.Point(0, 212);
+            this.painelExcluir.Location = new System.Drawing.Point(0, 113);
             this.painelExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.painelExcluir.Name = "painelExcluir";
             this.painelExcluir.Size = new System.Drawing.Size(962, 54);
@@ -340,17 +340,16 @@ namespace estoque_projeto_integradora
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 212);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 113);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(962, 396);
+            this.pictureBox2.Size = new System.Drawing.Size(962, 495);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // panelCadastrar
             // 
-            this.panelCadastrar.AutoSize = true;
             this.panelCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(31)))), ((int)(((byte)(29)))));
             this.panelCadastrar.Controls.Add(this.cadPedidos);
             this.panelCadastrar.Controls.Add(this.cadProduto);
@@ -361,7 +360,7 @@ namespace estoque_projeto_integradora
             this.panelCadastrar.Location = new System.Drawing.Point(0, 57);
             this.panelCadastrar.Margin = new System.Windows.Forms.Padding(2);
             this.panelCadastrar.Name = "panelCadastrar";
-            this.panelCadastrar.Size = new System.Drawing.Size(962, 155);
+            this.panelCadastrar.Size = new System.Drawing.Size(962, 56);
             this.panelCadastrar.TabIndex = 3;
             this.panelCadastrar.Visible = false;
             // 
@@ -375,7 +374,7 @@ namespace estoque_projeto_integradora
             this.cadPedidos.Location = new System.Drawing.Point(818, 0);
             this.cadPedidos.Margin = new System.Windows.Forms.Padding(2);
             this.cadPedidos.Name = "cadPedidos";
-            this.cadPedidos.Size = new System.Drawing.Size(121, 152);
+            this.cadPedidos.Size = new System.Drawing.Size(121, 56);
             this.cadPedidos.TabIndex = 3;
             this.cadPedidos.Text = "Setor";
             this.cadPedidos.UseVisualStyleBackColor = true;
@@ -388,10 +387,10 @@ namespace estoque_projeto_integradora
             this.cadProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadProduto.ForeColor = System.Drawing.Color.White;
-            this.cadProduto.Location = new System.Drawing.Point(647, 4);
+            this.cadProduto.Location = new System.Drawing.Point(647, 0);
             this.cadProduto.Margin = new System.Windows.Forms.Padding(2);
             this.cadProduto.Name = "cadProduto";
-            this.cadProduto.Size = new System.Drawing.Size(124, 152);
+            this.cadProduto.Size = new System.Drawing.Size(124, 56);
             this.cadProduto.TabIndex = 2;
             this.cadProduto.Text = "Produto";
             this.cadProduto.UseVisualStyleBackColor = true;
@@ -407,7 +406,7 @@ namespace estoque_projeto_integradora
             this.cadaFornecedor.Location = new System.Drawing.Point(220, 0);
             this.cadaFornecedor.Margin = new System.Windows.Forms.Padding(2);
             this.cadaFornecedor.Name = "cadaFornecedor";
-            this.cadaFornecedor.Size = new System.Drawing.Size(131, 152);
+            this.cadaFornecedor.Size = new System.Drawing.Size(131, 56);
             this.cadaFornecedor.TabIndex = 2;
             this.cadaFornecedor.Text = "Fornecedor";
             this.cadaFornecedor.UseVisualStyleBackColor = true;
@@ -423,7 +422,7 @@ namespace estoque_projeto_integradora
             this.cadCliente.Location = new System.Drawing.Point(26, 0);
             this.cadCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cadCliente.Name = "cadCliente";
-            this.cadCliente.Size = new System.Drawing.Size(134, 152);
+            this.cadCliente.Size = new System.Drawing.Size(134, 56);
             this.cadCliente.TabIndex = 1;
             this.cadCliente.Text = "Cliente";
             this.cadCliente.UseVisualStyleBackColor = true;
@@ -436,10 +435,10 @@ namespace estoque_projeto_integradora
             this.cadaFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadaFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cadaFuncionario.ForeColor = System.Drawing.Color.White;
-            this.cadaFuncionario.Location = new System.Drawing.Point(426, 2);
+            this.cadaFuncionario.Location = new System.Drawing.Point(426, 1);
             this.cadaFuncionario.Margin = new System.Windows.Forms.Padding(2);
             this.cadaFuncionario.Name = "cadaFuncionario";
-            this.cadaFuncionario.Size = new System.Drawing.Size(131, 152);
+            this.cadaFuncionario.Size = new System.Drawing.Size(131, 55);
             this.cadaFuncionario.TabIndex = 0;
             this.cadaFuncionario.Text = "Funcionario";
             this.cadaFuncionario.UseVisualStyleBackColor = true;
