@@ -17,6 +17,8 @@ namespace estoque_projeto_integradora.Classes
         public int IdEstoque { get; set; }
         public int IdProduto { get; set; }
         public string NomeProduto { get; set; }
+        public string DataPedidoDia { get; set; }
+        public Decimal TotalPedidosDia { get; set; }
 
 
         public DataSet ListBy()
@@ -55,10 +57,37 @@ namespace estoque_projeto_integradora.Classes
 
         public DataSet ListItensNomeProduto(int i)
         {
-            string sql = $"select top {i} iprod.idItensPedidos, p.nomeProduto, iprod.precoItensPedido from Itens_Pedidos iprod inner join Estoque e on iprod.idEstoque = e.idEstoque inner join Produto p on p.idProduto = e.idProduto order by iprod.idItensPedidos desc";
+            string sql = $"select top {i} iprod.quantidadeItensPedido as 'Quantidade', p.nomeProduto as 'Nome', iprod.precoItensPedido as 'Preço' from Itens_Pedidos iprod inner join Estoque e on iprod.idEstoque = e.idEstoque inner join Produto p on p.idProduto = e.idProduto order by iprod.idItensPedidos desc";
             connection.ListInfo(sql);
 
             connection.Disconnect();
+            return connection.ds;
+        }
+
+        public DataSet ListPedidosDoDia()
+        {
+            string sql = $"select p.idPedido, f.nomeFuncionario, c.nomeCliente, p.preco from Funcionario f inner join Pedidos p on f.idFuncionario = p.idFuncionario inner join Cliente c on p.idCliente = c.idCliente where p.dataPedido = '{DataPedidoDia}' and p.preco > 0";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
+        public void ConsultarSomaPedidosDia()
+        {
+            string sql = $"select SUM(p.preco) as 'total' from Pedidos p where p.dataPedido = '{DataPedidoDia}' and p.preco > 0";
+            connection.Consult(sql);
+
+            if (connection.dr.Read())
+            {
+                TotalPedidosDia = Decimal.Parse(connection.dr["total"].ToString());
+            }
+            connection.Disconnect();
+        }
+
+        public DataSet ListRelatorio()
+        {
+            string sql = $"select f.nomeFuncionario, c.nomeCliente, p.preco, p.dataPedido from Funcionario f inner join Pedidos p on f.idFuncionario = p.idFuncionario inner join Cliente c on p.idCliente = c.idCliente where p.dataPedido = '{DataPedidoDia}' and p.preco > 0";
+            connection.ListInfo(sql);
             return connection.ds;
         }
 

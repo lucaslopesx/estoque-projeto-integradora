@@ -16,26 +16,28 @@ namespace estoque_projeto_integradora.Forms
         {
             InitializeComponent();
         }
-        Classes.Fornecedor dados = new Classes.Fornecedor();
+        Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
         private void Excluir_Fornecedor_Load(object sender, EventArgs e)
         {
             comboBox1.DisplayMember = "nomeFornecedor";
             comboBox1.ValueMember = "idFornecedor";
-            comboBox1.DataSource = dados.List().Tables[0];
+            comboBox1.DataSource = dataFornecedor.ListNotIn().Tables[0];
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dados.IdFornecedor = int.Parse(comboBox1.SelectedValue.ToString());
-            dados.ConsultarDados();
-            txtCnpjFornecedor.Text = dados.CnpjFornecedor;
-            txtTelefoneFornecedor.Text = dados.TelefoneFornecedor;
+            dataFornecedor.IdFornecedor = int.Parse(comboBox1.SelectedValue.ToString());
+            dataFornecedor.ConsultarDados();
+            txtCnpjFornecedor.Text = dataFornecedor.CnpjFornecedor;
+            txtTelefoneFornecedor.Text = dataFornecedor.TelefoneFornecedor;
         }
 
         private void cmdExclu_Click(object sender, EventArgs e)
         {
-            dados.Excluir();
-            MessageBox.Show("Dados alterados");
+            dataFornecedor.Excluir();
+            
+            
+            MessageBox.Show("Dados alterados com sucesso");
         }
     }
 }

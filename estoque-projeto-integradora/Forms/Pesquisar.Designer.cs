@@ -38,10 +38,12 @@ namespace estoque_projeto_integradora.Forms
             // 
             // cmdPesquisar
             // 
+            this.cmdPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmdPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPesquisar.Location = new System.Drawing.Point(531, 13);
+            this.cmdPesquisar.Location = new System.Drawing.Point(606, 9);
+            this.cmdPesquisar.MaximumSize = new System.Drawing.Size(137, 45);
             this.cmdPesquisar.Name = "cmdPesquisar";
-            this.cmdPesquisar.Size = new System.Drawing.Size(137, 38);
+            this.cmdPesquisar.Size = new System.Drawing.Size(137, 45);
             this.cmdPesquisar.TabIndex = 0;
             this.cmdPesquisar.Text = "Pesquisar";
             this.cmdPesquisar.UseVisualStyleBackColor = true;
@@ -59,33 +61,37 @@ namespace estoque_projeto_integradora.Forms
             "Pedidos",
             "Produto",
             "Setor"});
-            this.comboBox1.Location = new System.Drawing.Point(27, 14);
+            this.comboBox1.Location = new System.Drawing.Point(106, 14);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(177, 37);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // txtBusca
             // 
             this.txtBusca.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusca.Location = new System.Drawing.Point(221, 14);
+            this.txtBusca.Location = new System.Drawing.Point(300, 14);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(291, 35);
             this.txtBusca.TabIndex = 3;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 77);
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Location = new System.Drawing.Point(106, 77);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 342);
+            this.dataGridView1.Size = new System.Drawing.Size(637, 465);
             this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Pesquisar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 431);
+            this.ClientSize = new System.Drawing.Size(854, 554);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.comboBox1);

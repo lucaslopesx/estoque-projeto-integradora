@@ -38,6 +38,7 @@ namespace estoque_projeto_integradora.Forms
             dados.TelefoneCliente = txtTelefone.Text;
             dados.EnderecoCliente = txtEndereco.Text;
             dados.CpfCliente = txtCpf.Text;
+            dados.NomeCliente = comboboxnome.Text;
             dados.AlterarCliente();
             MessageBox.Show("Registro alterado com sucesso!");
         }

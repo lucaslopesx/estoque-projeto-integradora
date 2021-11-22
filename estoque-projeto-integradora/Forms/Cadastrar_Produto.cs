@@ -22,7 +22,7 @@ namespace estoque_projeto_integradora.Forms
         Classes.Produto dataProduto = new Classes.Produto();
         Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
         Classes.Estoque dataEstoque = new Classes.Estoque();
-        Decimal value;
+        string valorProd;
         private void Cadastrar_Produto_Load(object sender, EventArgs e)
         {
             comboBox1.DisplayMember = "nomeSetor";
@@ -38,10 +38,16 @@ namespace estoque_projeto_integradora.Forms
 
         private void cmdCadastrar_Click(object sender, EventArgs e)
         {
+            valorProd = txtPreco.Text;
+
+            if (valorProd.Contains("."))
+            {
+                valorProd = valorProd.Replace(".", ",");
+            }
             dataProduto.IdSetor = int.Parse(comboBox1.SelectedValue.ToString());
             dataProduto.NomeProduto = txtNomeProduto.Text;
             dataProduto.DescProduto = txtDesc.Text;
-            dataProduto.PrecoProduto = Convert.ToDecimal(txtPreco.Text, CultureInfo.CurrentCulture);
+            dataProduto.PrecoProduto = Convert.ToDecimal(valorProd, CultureInfo.CurrentCulture);
             dataProduto.InsertProduto();
 
             /*dataEstoque.DataValEstoque = dateTimePicker1.Text.ToString();

@@ -21,7 +21,7 @@ namespace estoque_projeto_integradora.Forms
         {
             comboboxnome.DisplayMember = "nomeCliente";
             comboboxnome.ValueMember = "idCliente";
-            comboboxnome.DataSource = dados.List().Tables[0];
+            comboboxnome.DataSource = dados.ListNotIn().Tables[0];
         }
 
         private void comboboxnome_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,6 +40,8 @@ namespace estoque_projeto_integradora.Forms
             dados.CpfCliente = txtCpf.Text;
             dados.Excluir();
             MessageBox.Show("Registro alterado com sucesso!");
+            Excluir_Cliente_Load(sender, e);
+            comboboxnome_SelectedIndexChanged(sender, e);
         }
     
     }

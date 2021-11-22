@@ -25,18 +25,26 @@ namespace estoque_projeto_integradora.Classes
         }
         public void AlterarCliente()
         {
-            string sql = $"Update Cliente set cpfCliente = '{CpfCliente}',enderecoCliente = '{EnderecoCliente}', telefoneCliente = '{TelefoneCliente}' Where idCliente =" + IdCliente.ToString();
+            string sql = $"Update Cliente set nomeCliente = '{NomeCliente}', cpfCliente = '{CpfCliente}',enderecoCliente = '{EnderecoCliente}', telefoneCliente = '{TelefoneCliente}' where idCliente = {IdCliente}";
             connection.Execute(sql);
         }
 
         public void Excluir()
         {
-            string sql = $"Delete Cliente where idCliente = {IdCliente.ToString()}";
+            string sql = $"Delete Cliente where idCliente = {IdCliente}";
             connection.Execute(sql);
         }
         public DataSet List()
         {
             string sql = "Select * from Cliente";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
+        public DataSet ListNotIn()
+        {
+            string sql = "select c.idCliente, c.nomeCliente from Cliente c where c.idCliente not in (select c.idCliente from Cliente c inner join Pedidos p on c.idCliente = p.idCliente)";
             connection.ListInfo(sql);
 
             connection.Disconnect();

@@ -73,7 +73,6 @@ namespace estoque_projeto_integradora
                     DisableButton();
                     Color color = SelectThemeColor();
                     currentButton = (Button)btnSender;
-                    currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     paneltitlebar.BackColor = color;
@@ -308,6 +307,12 @@ namespace estoque_projeto_integradora
         private void excluFornecedor_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Excluir_Fornecedor(), sender);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            visiblePanel();
+            OpenChildForm(new Forms.PesquisarMovimentacaoDia(), sender);
         }
     }
 }
