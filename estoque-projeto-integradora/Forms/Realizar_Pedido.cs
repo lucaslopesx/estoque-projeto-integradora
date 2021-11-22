@@ -117,6 +117,7 @@ namespace estoque_projeto_integradora.Forms
             cbProduto.DataSource = dataProduto.List().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
             */
+            button1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -135,6 +136,7 @@ namespace estoque_projeto_integradora.Forms
                 dataParcelas.InsertParcelas(dataPagamento.QuantidadeParcela, Decimal.Parse(dataPedido.Preco.ToString()));
             }
             txtValorParcela.Text = dataParcelas.PrecoParcela.ToString();
+            button1.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
