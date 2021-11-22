@@ -17,11 +17,15 @@ namespace estoque_projeto_integradora.Forms
             InitializeComponent();
         }
         Classes.Funcionario dados = new Classes.Funcionario();
-        private void Excluir_Funcionario_Load(object sender, EventArgs e)
+        public void carregarCombo()
         {
             cbNome.DisplayMember = "nomeFuncionario";
             cbNome.ValueMember = "idFuncionario";
             cbNome.DataSource = dados.ListNotIn().Tables[0];
+        }
+        private void Excluir_Funcionario_Load(object sender, EventArgs e)
+        {
+            carregarCombo();
         }
 
         private void cbNome_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -38,7 +42,8 @@ namespace estoque_projeto_integradora.Forms
         private void alterFunc_Click_1(object sender, EventArgs e)
         {
             dados.Excluir();
-            MessageBox.Show("Dados excluido !!");
+            MessageBox.Show("Funcionario excluido !!");
+            carregarCombo();
         }
     }
 }

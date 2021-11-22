@@ -27,15 +27,13 @@ namespace estoque_projeto_integradora.Forms
             dataFunc.CargoFuncionario = txtCargo.Text;
 
             dataFunc.InsertFuncionario();
-
+            MessageBox.Show("Funcionario inserido com sucesso");
             txtCargo.Text = "";
             txtCpf.Text = "";
             txtDataNasc.Text = "";
             txtEndereco.Text = "";
             txtNomeFunc.Text = "";
             txtTelefone.Text = "";
-
-            MessageBox.Show("Funcionario inserido com sucesso");
         }
     }
 }

@@ -217,20 +217,6 @@ namespace estoque_projeto_integradora
             OpenChildForm(new Forms.CadastrarEstoque(), sender);
 
         }
-        private void cdaCliente_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void PesqPedidos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PesqFunc_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void cadCliente_Click(object sender, EventArgs e)
         {
             
@@ -288,11 +274,6 @@ namespace estoque_projeto_integradora
             OpenChildForm(new Forms.Alterar_Estoque(), sender);
         }
 
-        private void cadEstoque_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             visiblePanel();
@@ -301,11 +282,13 @@ namespace estoque_projeto_integradora
 
         private void ExclCliente_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             OpenChildForm(new Forms.Excluir_Cliente(), sender);
         }
 
         private void excluFornecedor_Click(object sender, EventArgs e)
         {
+            visiblePanel();
             OpenChildForm(new Forms.Excluir_Fornecedor(), sender);
         }
 
@@ -313,6 +296,12 @@ namespace estoque_projeto_integradora
         {
             visiblePanel();
             OpenChildForm(new Forms.PesquisarMovimentacaoDia(), sender);
+        }
+
+        private void cmdPedido_Click(object sender, EventArgs e)
+        {
+            visiblePanel();
+            OpenChildForm(new Forms.Excluir_Pedidos(), sender);
         }
     }
 }

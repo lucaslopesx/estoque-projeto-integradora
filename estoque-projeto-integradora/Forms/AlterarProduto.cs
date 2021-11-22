@@ -40,7 +40,7 @@ namespace estoque_projeto_integradora.Forms
                 ms.Write(dados.FotoProduto, 0, dados.FotoProduto.Length);
                 pictureBox1.Image = Image.FromStream(ms);
             }
-            txtPreco.Text = dados.PrecoProduto.ToString("");
+            txtPreco.Text = dados.PrecoProduto.ToString("C");
             txtDesc.Text = dados.DescProduto.ToString();
             cbSetor.Text = dados.nomeSetor;
         }

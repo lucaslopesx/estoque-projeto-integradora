@@ -17,11 +17,15 @@ namespace estoque_projeto_integradora.Forms
             InitializeComponent();
         }
         Classes.Cliente dados = new Classes.Cliente();
-        private void Excluir_Cliente_Load(object sender, EventArgs e)
+        public void CarregaCombo()
         {
             comboboxnome.DisplayMember = "nomeCliente";
             comboboxnome.ValueMember = "idCliente";
             comboboxnome.DataSource = dados.ListNotIn().Tables[0];
+        }
+        private void Excluir_Cliente_Load(object sender, EventArgs e)
+        {
+            CarregaCombo();
         }
 
         private void comboboxnome_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,13 +39,9 @@ namespace estoque_projeto_integradora.Forms
 
         private void cmdExcluir_Click(object sender, EventArgs e)
         {
-            dados.TelefoneCliente = txtTelefone.Text;
-            dados.EnderecoCliente = txtEndereco.Text;
-            dados.CpfCliente = txtCpf.Text;
             dados.Excluir();
-            MessageBox.Show("Registro alterado com sucesso!");
-            Excluir_Cliente_Load(sender, e);
-            comboboxnome_SelectedIndexChanged(sender, e);
+            MessageBox.Show("Cliente excluido com sucesso");
+            CarregaCombo();
         }
     
     }

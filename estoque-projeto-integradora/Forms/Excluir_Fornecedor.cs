@@ -17,11 +17,15 @@ namespace estoque_projeto_integradora.Forms
             InitializeComponent();
         }
         Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
-        private void Excluir_Fornecedor_Load(object sender, EventArgs e)
+        public void carregarCombo()
         {
             comboBox1.DisplayMember = "nomeFornecedor";
             comboBox1.ValueMember = "idFornecedor";
             comboBox1.DataSource = dataFornecedor.ListNotIn().Tables[0];
+        }
+        private void Excluir_Fornecedor_Load(object sender, EventArgs e)
+        {
+            carregarCombo();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -35,9 +39,8 @@ namespace estoque_projeto_integradora.Forms
         private void cmdExclu_Click(object sender, EventArgs e)
         {
             dataFornecedor.Excluir();
-            
-            
-            MessageBox.Show("Dados alterados com sucesso");
+            MessageBox.Show("Fornecedor excluido");
+            carregarCombo();
         }
     }
 }

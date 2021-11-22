@@ -23,8 +23,7 @@ namespace estoque_projeto_integradora.Forms
         {
             MessageBox.Show("The selected value is " + dateTimePicker1.Text);
         }
-
-        private void CadastrarEstoque_Load(object sender, EventArgs e)
+        public void carregarCombo()
         {
             cbFornecedor.DisplayMember = "nomeFornecedor";
             cbFornecedor.ValueMember = "idFornecedor";
@@ -35,6 +34,10 @@ namespace estoque_projeto_integradora.Forms
             cbProduto.DataSource = dataProduto.List().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+        private void CadastrarEstoque_Load(object sender, EventArgs e)
+        {
+            carregarCombo();
+        }
 
         private void cmdCadastrar_Click(object sender, EventArgs e)
         {
@@ -43,8 +46,9 @@ namespace estoque_projeto_integradora.Forms
             dataEstoque.NumeroLote = txtNumLote.Text;
             dataEstoque.IdFornecedor = int.Parse(cbFornecedor.SelectedValue.ToString());
             dataEstoque.IdProduto = int.Parse(cbProduto.SelectedValue.ToString());
-
             dataEstoque.InsertEstoque();
+            MessageBox.Show("Estoque cadastrado com sucesso!");
+            carregarCombo();
         }
     }
 }

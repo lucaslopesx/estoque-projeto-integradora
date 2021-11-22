@@ -105,7 +105,7 @@ namespace estoque_projeto_integradora.Forms
             this.cmdExcluir.Name = "cmdExcluir";
             this.cmdExcluir.Size = new System.Drawing.Size(239, 91);
             this.cmdExcluir.TabIndex = 35;
-            this.cmdExcluir.Text = "Alterar Cliente";
+            this.cmdExcluir.Text = "Excluir cliente";
             this.cmdExcluir.UseVisualStyleBackColor = true;
             this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
             // 

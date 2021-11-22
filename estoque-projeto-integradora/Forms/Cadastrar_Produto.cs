@@ -23,12 +23,18 @@ namespace estoque_projeto_integradora.Forms
         Classes.Fornecedor dataFornecedor = new Classes.Fornecedor();
         Classes.Estoque dataEstoque = new Classes.Estoque();
         string valorProd;
-        private void Cadastrar_Produto_Load(object sender, EventArgs e)
+        public void CarregarCombo()
         {
+            pictureBox1.Image = Properties.Resources.semfoto;
+            ConverteFoto();
             comboBox1.DisplayMember = "nomeSetor";
             comboBox1.ValueMember = "idSetor";
             comboBox1.DataSource = dataSetor.List().Tables[0];
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+        }
+        private void Cadastrar_Produto_Load(object sender, EventArgs e)
+        {
+            CarregarCombo();
 
             /*cbFornecedor.DisplayMember = "nomeFornecedor";
             cbFornecedor.ValueMember = "idFornecedor";
@@ -49,6 +55,10 @@ namespace estoque_projeto_integradora.Forms
             dataProduto.DescProduto = txtDesc.Text;
             dataProduto.PrecoProduto = Convert.ToDecimal(valorProd, CultureInfo.CurrentCulture);
             dataProduto.InsertProduto();
+            MessageBox.Show("Produto Cadastrado com sucesso");
+            txtNomeProduto.Clear();
+            txtDesc.Clear();
+            txtPreco.Clear();
 
             /*dataEstoque.DataValEstoque = dateTimePicker1.Text.ToString();
             dataEstoque.QtdEstoque = int.Parse(nudQuantidade.ToString());
@@ -65,11 +75,6 @@ namespace estoque_projeto_integradora.Forms
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
-                ConverteFoto();
-            }
-            else
-            {
-                pictureBox1.Image = Properties.Resources.semfoto;
                 ConverteFoto();
             }
         }
