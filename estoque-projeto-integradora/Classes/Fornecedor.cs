@@ -24,7 +24,7 @@ namespace estoque_projeto_integradora.Classes
         }
         public void AlterFornecedor()
         {
-            string sql = $"Update Fornecedor set cnpjFornecedor = '{CnpjFornecedor}',telefoneFornecedor = '{TelefoneFornecedor}', Where idFornecedor =" + IdFornecedor.ToString();
+            string sql = $"Update Fornecedor set cnpjFornecedor = '{CnpjFornecedor}',telefoneFornecedor = '{TelefoneFornecedor}' Where idFornecedor = {IdFornecedor} ";
             connection.Execute(sql);
         }
         public void Excluir()
@@ -35,6 +35,14 @@ namespace estoque_projeto_integradora.Classes
         public DataSet List()
         {
             string sql = "Select * from Fornecedor";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
+        public DataSet ListNotIn()
+        {
+            string sql = "select f.idFornecedor, f.nomeFornecedor from Fornecedor f where f.nomeFornecedor not in (select f.nomeFornecedor from Fornecedor f inner join Estoque e on f.idFornecedor = e.idFornecedor)";
             connection.ListInfo(sql);
 
             connection.Disconnect();

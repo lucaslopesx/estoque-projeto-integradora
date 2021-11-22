@@ -27,18 +27,27 @@ namespace estoque_projeto_integradora.Classes
         }
         public void AlterarFuncionario()
         {
-            string sql = $"Update Funcionario set cpfFuncionario = '{CpfFuncionario}',dataNascFuncionario = '{DataNascFuncionario}',enderecoFuncionario = '{EnderecoFuncionario}',telefoneFuncionario = '{TelefoneFuncionario}', cargoFuncionario = '{CargoFuncionario}' Where idFuncionario =" + IdFuncionario.ToString();
+            string sql = $"Update Funcionario set cpfFuncionario = '{CpfFuncionario}',dataNascFuncionario = '{DataNascFuncionario}',enderecoFuncionario = '{EnderecoFuncionario}',telefoneFuncionario = '{TelefoneFuncionario}', cargoFuncionario = '{CargoFuncionario}' where idFuncionario = {IdFuncionario}";
             connection.Execute(sql);
         }
         public void Excluir()
         {
-            string sql = $"Delete Funcionario where idFuncionario =  {IdFuncionario.ToString()}";
+            string sql = $"Delete Funcionario where idFuncionario = {IdFuncionario}";
             connection.Execute(sql);
         }
 
         public DataSet List()
         {
             string sql = "Select * from Funcionario";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
+
+        public DataSet ListNotIn()
+        {
+            string sql = "select f.idFuncionario, f.nomeFuncionario from Funcionario f where f.idFuncionario not in (select f.idFuncionario from Funcionario f inner join Pedidos p on f.idFuncionario = p.idFuncionario)";
             connection.ListInfo(sql);
 
             connection.Disconnect();
@@ -61,3 +70,5 @@ namespace estoque_projeto_integradora.Classes
         }
     }
 }
+
+

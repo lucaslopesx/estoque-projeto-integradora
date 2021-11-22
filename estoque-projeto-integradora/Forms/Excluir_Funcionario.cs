@@ -21,7 +21,7 @@ namespace estoque_projeto_integradora.Forms
         {
             cbNome.DisplayMember = "nomeFuncionario";
             cbNome.ValueMember = "idFuncionario";
-            cbNome.DataSource = dados.List().Tables[0];
+            cbNome.DataSource = dados.ListNotIn().Tables[0];
         }
 
         private void cbNome_SelectedIndexChanged_1(object sender, EventArgs e)

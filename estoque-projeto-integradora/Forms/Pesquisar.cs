@@ -27,5 +27,20 @@ namespace estoque_projeto_integradora.Forms
 
             dataGridView1.DataSource = dataGeral.ListBy().Tables[0];
         }
+
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

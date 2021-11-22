@@ -44,5 +44,11 @@ namespace estoque_projeto_integradora.Classes
             }
             connection.Disconnect();
         }
+
+        public void DeleteLastPedido()
+        {
+            string sql = $"Delete Pedidos where idPedido = {IdPedido}";
+            connection.Execute(sql);
+        }
     }
 }

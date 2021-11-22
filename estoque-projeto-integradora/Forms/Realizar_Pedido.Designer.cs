@@ -51,7 +51,6 @@ namespace estoque_projeto_integradora.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.cmdAddProduto = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cmdIniciarPedido = new System.Windows.Forms.Button();
             this.cbNumLote = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -59,20 +58,24 @@ namespace estoque_projeto_integradora.Forms
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.txtVALORFINAL = new System.Windows.Forms.TextBox();
+            this.lblValorFinal = new System.Windows.Forms.Label();
             this.cbFormaPag = new System.Windows.Forms.ComboBox();
             this.cbParcelas = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtVALORFINAL = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblParcela = new System.Windows.Forms.Label();
+            this.txtValorParcela = new System.Windows.Forms.TextBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmdCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdItensPedido)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbFuncionario
@@ -125,7 +128,7 @@ namespace estoque_projeto_integradora.Forms
             this.cmdFinalizar.Enabled = false;
             this.cmdFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdFinalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdFinalizar.Location = new System.Drawing.Point(273, 442);
+            this.cmdFinalizar.Location = new System.Drawing.Point(335, 445);
             this.cmdFinalizar.MaximumSize = new System.Drawing.Size(243, 48);
             this.cmdFinalizar.Name = "cmdFinalizar";
             this.cmdFinalizar.Size = new System.Drawing.Size(243, 48);
@@ -401,8 +404,10 @@ namespace estoque_projeto_integradora.Forms
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txtValorParcela);
+            this.panel4.Controls.Add(this.lblParcela);
             this.panel4.Controls.Add(this.txtVALORFINAL);
-            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.lblValorFinal);
             this.panel4.Controls.Add(this.cbFormaPag);
             this.panel4.Controls.Add(this.cbParcelas);
             this.panel4.Controls.Add(this.label9);
@@ -415,41 +420,26 @@ namespace estoque_projeto_integradora.Forms
             this.panel4.TabIndex = 92;
             this.panel4.Visible = false;
             // 
-            // button1
+            // txtVALORFINAL
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(305, 427);
-            this.button1.MaximumSize = new System.Drawing.Size(208, 79);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(208, 79);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "Inserir método de pagamento";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtVALORFINAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtVALORFINAL.Enabled = false;
+            this.txtVALORFINAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVALORFINAL.Location = new System.Drawing.Point(381, 366);
+            this.txtVALORFINAL.Name = "txtVALORFINAL";
+            this.txtVALORFINAL.Size = new System.Drawing.Size(167, 38);
+            this.txtVALORFINAL.TabIndex = 89;
             // 
-            // label12
+            // lblValorFinal
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(282, 56);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(244, 29);
-            this.label12.TabIndex = 75;
-            this.label12.Text = "Forma de pagamento";
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(282, 163);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(232, 29);
-            this.label9.TabIndex = 74;
-            this.label9.Text = "Número de parcelas";
-            this.label9.Visible = false;
+            this.lblValorFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblValorFinal.AutoSize = true;
+            this.lblValorFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorFinal.Location = new System.Drawing.Point(258, 371);
+            this.lblValorFinal.Name = "lblValorFinal";
+            this.lblValorFinal.Size = new System.Drawing.Size(125, 29);
+            this.lblValorFinal.TabIndex = 88;
+            this.lblValorFinal.Text = "Valor final:";
             // 
             // cbFormaPag
             // 
@@ -492,25 +482,81 @@ namespace estoque_projeto_integradora.Forms
             this.cbParcelas.TabIndex = 60;
             this.cbParcelas.Visible = false;
             // 
-            // label14
+            // label9
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(258, 371);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(125, 29);
-            this.label14.TabIndex = 88;
-            this.label14.Text = "Valor final:";
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(282, 163);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(232, 29);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "Número de parcelas";
+            this.label9.Visible = false;
             // 
-            // txtVALORFINAL
+            // label12
             // 
-            this.txtVALORFINAL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtVALORFINAL.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVALORFINAL.Location = new System.Drawing.Point(381, 366);
-            this.txtVALORFINAL.Name = "txtVALORFINAL";
-            this.txtVALORFINAL.Size = new System.Drawing.Size(167, 38);
-            this.txtVALORFINAL.TabIndex = 89;
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(282, 56);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(244, 29);
+            this.label12.TabIndex = 75;
+            this.label12.Text = "Forma de pagamento";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(305, 427);
+            this.button1.MaximumSize = new System.Drawing.Size(208, 79);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 79);
+            this.button1.TabIndex = 86;
+            this.button1.Text = "Finalizar pagamento";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblParcela
+            // 
+            this.lblParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lblParcela.AutoSize = true;
+            this.lblParcela.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblParcela.Location = new System.Drawing.Point(189, 328);
+            this.lblParcela.Name = "lblParcela";
+            this.lblParcela.Size = new System.Drawing.Size(194, 29);
+            this.lblParcela.TabIndex = 90;
+            this.lblParcela.Text = "Valor da parcela:";
+            this.lblParcela.Visible = false;
+            // 
+            // txtValorParcela
+            // 
+            this.txtValorParcela.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtValorParcela.Enabled = false;
+            this.txtValorParcela.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValorParcela.Location = new System.Drawing.Point(381, 322);
+            this.txtValorParcela.Name = "txtValorParcela";
+            this.txtValorParcela.Size = new System.Drawing.Size(167, 38);
+            this.txtValorParcela.TabIndex = 91;
+            this.txtValorParcela.Visible = false;
+            // 
+            // cmdCancelar
+            // 
+            this.cmdCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmdCancelar.BackColor = System.Drawing.Color.Red;
+            this.cmdCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCancelar.ForeColor = System.Drawing.SystemColors.Control;
+            this.cmdCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cmdCancelar.Location = new System.Drawing.Point(21, 472);
+            this.cmdCancelar.MaximumSize = new System.Drawing.Size(115, 48);
+            this.cmdCancelar.MinimumSize = new System.Drawing.Size(115, 48);
+            this.cmdCancelar.Name = "cmdCancelar";
+            this.cmdCancelar.Size = new System.Drawing.Size(115, 48);
+            this.cmdCancelar.TabIndex = 70;
+            this.cmdCancelar.Text = "Cancelar";
+            this.cmdCancelar.UseVisualStyleBackColor = false;
+            this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
             // 
             // Realizar_Pedido
             // 
@@ -532,6 +578,7 @@ namespace estoque_projeto_integradora.Forms
             this.Controls.Add(this.cmdFinalizar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
+            this.Controls.Add(this.cmdCancelar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Realizar_Pedido";
             this.Text = "Realizar_Pedido";
@@ -539,13 +586,13 @@ namespace estoque_projeto_integradora.Forms
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdItensPedido)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -587,7 +634,10 @@ namespace estoque_projeto_integradora.Forms
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblValorFinal;
         private System.Windows.Forms.TextBox txtVALORFINAL;
+        private System.Windows.Forms.TextBox txtValorParcela;
+        private System.Windows.Forms.Label lblParcela;
+        private System.Windows.Forms.Button cmdCancelar;
     }
 }

@@ -90,6 +90,7 @@ namespace estoque_projeto_integradora.Forms
             txtPrecoPedido.Text = "R$" + dataPedido.Preco.ToString();
 
             cmdFinalizar.Enabled = true;
+            nudQtdItensPedido.Value = 1;
 
         }
         private void cmdConfirmar_Click(object sender, EventArgs e)
@@ -116,6 +117,7 @@ namespace estoque_projeto_integradora.Forms
             cbProduto.DataSource = dataProduto.List().Tables[0];
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
             */
+            button1.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -133,12 +135,16 @@ namespace estoque_projeto_integradora.Forms
                 dataParcelas.IdPagamento = dataPagamento.IdPagamento;
                 dataParcelas.InsertParcelas(dataPagamento.QuantidadeParcela, Decimal.Parse(dataPedido.Preco.ToString()));
             }
+            txtValorParcela.Text = dataParcelas.PrecoParcela.ToString();
+            button1.Enabled = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(cbFormaPag.SelectedItem == "Crediário")
             {
+                lblParcela.Visible = true;
+                txtValorParcela.Visible = true;
                 cbParcelas.Visible = true;
                 label9.Visible = true;
             }
@@ -147,7 +153,15 @@ namespace estoque_projeto_integradora.Forms
                 cbParcelas.Visible = false;
                 label9.Visible = false;
                 dataPagamento.QuantidadeParcela = 0;
+                txtValorParcela.Visible = false;
+                lblParcela.Visible = false;
             }
+        }
+
+        private void cmdCancelar_Click(object sender, EventArgs e)
+        {
+            dataPedido.IdPedido = int.Parse(dataPedido.getLastIdPedido().ToString());
+            dataPedido.DeleteLastPedido();
         }
     }
 }

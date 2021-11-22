@@ -24,8 +24,7 @@ namespace estoque_projeto_integradora.Classes
             {
                 string sql = $"Insert into Parcela (idPagamento, numeroParcela, precoParcela) values ({IdPagamento}, {i}, {PrecoParcela.ToString().Replace(',', '.')})";
                 connection.Execute(sql);
-            }
-            
+            } 
         }
 
     }
