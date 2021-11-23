@@ -96,6 +96,7 @@ namespace estoque_projeto_integradora.Classes
         {
             string sql = $"select f.nomeFuncionario, c.nomeCliente, p.preco, p.dataPedido from Funcionario f inner join Pedidos p on f.idFuncionario = p.idFuncionario inner join Cliente c on p.idCliente = c.idCliente where p.dataPedido = '{DataPedidoDia}' and p.preco > 0";
             connection.ListInfo(sql);
+            connection.Disconnect();
             return connection.ds;
         }
 

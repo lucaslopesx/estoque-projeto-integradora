@@ -111,6 +111,7 @@ namespace estoque_projeto_integradora.Forms
             cbFuncionario.DataSource = dataFuncionario.List().Tables[0];
             cbFuncionario.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            cbFormaPag.Text = "À vista";
             /*
             cbProduto.DisplayMember = "nomeProduto";
             cbProduto.ValueMember = "idProduto";

@@ -303,5 +303,11 @@ namespace estoque_projeto_integradora
             visiblePanel();
             OpenChildForm(new Forms.Excluir_Pedidos(), sender);
         }
+
+        private void cmdEstoque_Click(object sender, EventArgs e)
+        {
+            visiblePanel();
+            OpenChildForm(new Forms.Excluir_Estoque(), sender);
+        }
     }
 }

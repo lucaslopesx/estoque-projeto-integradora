@@ -23,7 +23,7 @@ namespace estoque_projeto_integradora.Forms
         {
             cbEstoque.DisplayMember = ("idEstoque").ToString();
             cbEstoque.ValueMember = "idEstoque";
-            cbEstoque.DataSource = dataEstoque.List().Tables[0];
+            cbEstoque.DataSource = dataEstoque.listNotIn().Tables[0];
             cbFornecedor.DisplayMember = "nomeFornecedor";
             cbFornecedor.ValueMember = "idFornecedor";
             cbFornecedor.DataSource = dataFornecedor.List().Tables[0];

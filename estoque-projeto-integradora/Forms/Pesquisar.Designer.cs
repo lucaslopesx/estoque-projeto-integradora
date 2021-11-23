@@ -39,10 +39,11 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.cmdPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmdPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPesquisar.Location = new System.Drawing.Point(493, 9);
-            this.cmdPesquisar.MaximumSize = new System.Drawing.Size(137, 45);
+            this.cmdPesquisar.Location = new System.Drawing.Point(657, 11);
+            this.cmdPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdPesquisar.MaximumSize = new System.Drawing.Size(183, 55);
             this.cmdPesquisar.Name = "cmdPesquisar";
-            this.cmdPesquisar.Size = new System.Drawing.Size(137, 45);
+            this.cmdPesquisar.Size = new System.Drawing.Size(183, 55);
             this.cmdPesquisar.TabIndex = 0;
             this.cmdPesquisar.Text = "Pesquisar";
             this.cmdPesquisar.UseVisualStyleBackColor = true;
@@ -60,10 +61,14 @@ namespace estoque_projeto_integradora.Forms
             "Funcionario",
             "Pedidos",
             "Produto",
-            "Setor"});
-            this.comboBox1.Location = new System.Drawing.Point(214, 14);
+            "Setor",
+            "Pagamento",
+            "Parcela",
+            "Itens_Pedidos"});
+            this.comboBox1.Location = new System.Drawing.Point(285, 17);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(250, 37);
+            this.comboBox1.Size = new System.Drawing.Size(332, 44);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -72,22 +77,23 @@ namespace estoque_projeto_integradora.Forms
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Location = new System.Drawing.Point(106, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(141, 95);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 465);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(849, 572);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Pesquisar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(854, 554);
+            this.ClientSize = new System.Drawing.Size(1139, 682);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cmdPesquisar);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Pesquisar";
             this.Text = "Pesquisar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

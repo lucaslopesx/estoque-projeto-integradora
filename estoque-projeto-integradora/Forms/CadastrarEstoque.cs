@@ -48,6 +48,8 @@ namespace estoque_projeto_integradora.Forms
             dataEstoque.IdProduto = int.Parse(cbProduto.SelectedValue.ToString());
             dataEstoque.InsertEstoque();
             MessageBox.Show("Estoque cadastrado com sucesso!");
+            txtNumLote.Text = "";
+            nudQuantidade.Value = 0;
             carregarCombo();
         }
     }
