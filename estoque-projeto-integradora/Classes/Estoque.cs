@@ -46,6 +46,14 @@ namespace estoque_projeto_integradora.Classes
             }
             connection.Disconnect();
         }
+        public DataSet listNotIn()
+        {
+            string sql = $"select e.idEstoque from Estoque e where e.idEstoque not in (select e.idEstoque from Estoque e inner join Itens_Pedidos iprod on e.idEstoque = iprod.idEstoque)";
+            connection.ListInfo(sql);
+
+            connection.Disconnect();
+            return connection.ds;
+        }
         public DataSet List()
         {
             string sql = "Select * from Estoque";
