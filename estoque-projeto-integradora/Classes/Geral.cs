@@ -79,7 +79,15 @@ namespace estoque_projeto_integradora.Classes
 
             if (connection.dr.Read())
             {
-                TotalPedidosDia = Decimal.Parse(connection.dr["total"].ToString());
+                try
+                {
+                    TotalPedidosDia = Decimal.Parse(connection.dr["total"].ToString());
+
+                }
+                catch (Exception)
+                {
+                    TotalPedidosDia = 0;
+                }
             }
             connection.Disconnect();
         }
