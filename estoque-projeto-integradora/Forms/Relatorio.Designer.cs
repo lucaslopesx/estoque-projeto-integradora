@@ -36,9 +36,10 @@ namespace estoque_projeto_integradora.Forms
             // cmdGerarRelatório
             // 
             this.cmdGerarRelatório.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdGerarRelatório.Location = new System.Drawing.Point(318, 237);
+            this.cmdGerarRelatório.Location = new System.Drawing.Point(425, 288);
+            this.cmdGerarRelatório.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdGerarRelatório.Name = "cmdGerarRelatório";
-            this.cmdGerarRelatório.Size = new System.Drawing.Size(141, 69);
+            this.cmdGerarRelatório.Size = new System.Drawing.Size(188, 85);
             this.cmdGerarRelatório.TabIndex = 0;
             this.cmdGerarRelatório.Text = "Gerar Relatório";
             this.cmdGerarRelatório.UseVisualStyleBackColor = true;
@@ -50,20 +51,23 @@ namespace estoque_projeto_integradora.Forms
             this.dateTimePicker2.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(292, 123);
+            this.dateTimePicker2.Location = new System.Drawing.Point(389, 151);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(188, 35);
+            this.dateTimePicker2.Size = new System.Drawing.Size(249, 41);
             this.dateTimePicker2.TabIndex = 61;
             // 
             // Relatorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.cmdGerarRelatório);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Relatorio";
             this.Text = "Relatorio";
+            this.Load += new System.EventHandler(this.Relatorio_Load);
             this.ResumeLayout(false);
 
         }

@@ -118,6 +118,7 @@ namespace estoque_projeto_integradora.Forms
             cbProduto.DropDownStyle = ComboBoxStyle.DropDownList;
             */
             button1.Enabled = true;
+            cbFormaPag.Text = "À vista";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -163,5 +164,6 @@ namespace estoque_projeto_integradora.Forms
             dataPedido.IdPedido = int.Parse(dataPedido.getLastIdPedido().ToString());
             dataPedido.DeleteLastPedido();
         }
+
     }
 }

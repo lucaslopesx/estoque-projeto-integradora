@@ -49,7 +49,7 @@ namespace estoque_projeto_integradora.Forms
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(263, 82);
+            this.label2.Location = new System.Drawing.Point(272, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(276, 36);
@@ -61,7 +61,7 @@ namespace estoque_projeto_integradora.Forms
             this.cbEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEstoque.FormattingEnabled = true;
-            this.cbEstoque.Location = new System.Drawing.Point(269, 132);
+            this.cbEstoque.Location = new System.Drawing.Point(278, 59);
             this.cbEstoque.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEstoque.Name = "cbEstoque";
             this.cbEstoque.Size = new System.Drawing.Size(159, 44);
@@ -73,7 +73,7 @@ namespace estoque_projeto_integradora.Forms
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 264);
+            this.label1.Location = new System.Drawing.Point(272, 191);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(286, 36);
@@ -85,7 +85,7 @@ namespace estoque_projeto_integradora.Forms
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(263, 178);
+            this.label6.Location = new System.Drawing.Point(272, 105);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(246, 36);
@@ -97,7 +97,7 @@ namespace estoque_projeto_integradora.Forms
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(263, 460);
+            this.label3.Location = new System.Drawing.Point(272, 387);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 36);
@@ -110,7 +110,7 @@ namespace estoque_projeto_integradora.Forms
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(345, 402);
+            this.dateTimePicker1.Location = new System.Drawing.Point(354, 329);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(249, 41);
@@ -120,8 +120,13 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.nudQuantidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.nudQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantidade.Location = new System.Drawing.Point(476, 595);
+            this.nudQuantidade.Location = new System.Drawing.Point(485, 482);
             this.nudQuantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.nudQuantidade.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(101, 41);
             this.nudQuantidade.TabIndex = 77;
@@ -131,7 +136,7 @@ namespace estoque_projeto_integradora.Forms
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(284, 599);
+            this.label4.Location = new System.Drawing.Point(293, 486);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 36);
@@ -143,11 +148,12 @@ namespace estoque_projeto_integradora.Forms
             this.cmdexcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cmdexcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdexcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cmdexcluir.Location = new System.Drawing.Point(345, 680);
+            this.cmdexcluir.Location = new System.Drawing.Point(352, 544);
             this.cmdexcluir.Margin = new System.Windows.Forms.Padding(4);
-            this.cmdexcluir.MaximumSize = new System.Drawing.Size(196, 85);
+            this.cmdexcluir.MaximumSize = new System.Drawing.Size(196, 69);
+            this.cmdexcluir.MinimumSize = new System.Drawing.Size(196, 69);
             this.cmdexcluir.Name = "cmdexcluir";
-            this.cmdexcluir.Size = new System.Drawing.Size(196, 0);
+            this.cmdexcluir.Size = new System.Drawing.Size(196, 69);
             this.cmdexcluir.TabIndex = 75;
             this.cmdexcluir.Text = "Excluir";
             this.cmdexcluir.UseVisualStyleBackColor = true;
@@ -158,7 +164,7 @@ namespace estoque_projeto_integradora.Forms
             this.cbFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbFornecedor.FormattingEnabled = true;
-            this.cbFornecedor.Location = new System.Drawing.Point(269, 303);
+            this.cbFornecedor.Location = new System.Drawing.Point(278, 230);
             this.cbFornecedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbFornecedor.Name = "cbFornecedor";
             this.cbFornecedor.Size = new System.Drawing.Size(387, 44);
@@ -169,7 +175,7 @@ namespace estoque_projeto_integradora.Forms
             this.cbProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbProduto.FormattingEnabled = true;
-            this.cbProduto.Location = new System.Drawing.Point(269, 216);
+            this.cbProduto.Location = new System.Drawing.Point(278, 143);
             this.cbProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbProduto.Name = "cbProduto";
             this.cbProduto.Size = new System.Drawing.Size(387, 44);
@@ -179,7 +185,7 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.txtNumLote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNumLote.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumLote.Location = new System.Drawing.Point(269, 500);
+            this.txtNumLote.Location = new System.Drawing.Point(278, 427);
             this.txtNumLote.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumLote.Name = "txtNumLote";
             this.txtNumLote.Size = new System.Drawing.Size(387, 41);
@@ -189,7 +195,7 @@ namespace estoque_projeto_integradora.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 719);
+            this.ClientSize = new System.Drawing.Size(924, 899);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEstoque);
             this.Controls.Add(this.label1);

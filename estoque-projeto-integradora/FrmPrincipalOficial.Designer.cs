@@ -30,16 +30,25 @@ namespace estoque_projeto_integradora
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnPedidos = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.painelExcluir = new System.Windows.Forms.Panel();
+            this.cmdEstoque = new System.Windows.Forms.Button();
+            this.cmdPedido = new System.Windows.Forms.Button();
             this.ExclCliente = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.excluFornecedor = new System.Windows.Forms.Button();
-            this.ExcluProduto = new System.Windows.Forms.Button();
             this.excluFunc = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelCadastrar = new System.Windows.Forms.Panel();
             this.cadPedidos = new System.Windows.Forms.Button();
             this.cadProduto = new System.Windows.Forms.Button();
@@ -52,33 +61,23 @@ namespace estoque_projeto_integradora
             this.AltFornecedor = new System.Windows.Forms.Button();
             this.AltCliente = new System.Windows.Forms.Button();
             this.AlterarFuncionario = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbltitle = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.paneltitlebar = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechaChildForms = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.cmdPedido = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelDesktop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.painelExcluir.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelCadastrar.SuspendLayout();
             this.panelAlterar.SuspendLayout();
-            this.paneltitlebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.paneltitlebar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -100,6 +99,166 @@ namespace estoque_projeto_integradora
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(261, 826);
             this.panelMenu.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Image = global::estoque_projeto_integradora.Properties.Resources.trending_up__1_1;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 656);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(261, 82);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Movimentação do dia";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = global::estoque_projeto_integradora.Properties.Resources.add_shopping_cart;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 574);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(261, 82);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Armazenar no estoque";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button5.Image = global::estoque_projeto_integradora.Properties.Resources.shopping_list;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 492);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(261, 82);
+            this.button5.TabIndex = 8;
+            this.button5.Text = " Relatorio";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button4.Image = global::estoque_projeto_integradora.Properties.Resources.value__1_;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 410);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(261, 82);
+            this.button4.TabIndex = 5;
+            this.button4.Text = " Pesquisar";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button3.Image = global::estoque_projeto_integradora.Properties.Resources.cross_out__2_;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 328);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(261, 82);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "  Excluir";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAlterar.Image = global::estoque_projeto_integradora.Properties.Resources.settings;
+            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Location = new System.Drawing.Point(0, 246);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnAlterar.Size = new System.Drawing.Size(261, 82);
+            this.btnAlterar.TabIndex = 3;
+            this.btnAlterar.Text = " Alterar";
+            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCadastrar.Image = global::estoque_projeto_integradora.Properties.Resources.value;
+            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Location = new System.Drawing.Point(0, 164);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnCadastrar.Size = new System.Drawing.Size(261, 82);
+            this.btnCadastrar.TabIndex = 2;
+            this.btnCadastrar.Text = " Cadastrar";
+            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnPedidos
+            // 
+            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPedidos.FlatAppearance.BorderSize = 0;
+            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPedidos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPedidos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPedidos.Image = global::estoque_projeto_integradora.Properties.Resources.shopping_cart__1_;
+            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPedidos.Location = new System.Drawing.Point(0, 82);
+            this.btnPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPedidos.Name = "btnPedidos";
+            this.btnPedidos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btnPedidos.Size = new System.Drawing.Size(261, 82);
+            this.btnPedidos.TabIndex = 1;
+            this.btnPedidos.Text = " Pedidos";
+            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPedidos.UseVisualStyleBackColor = true;
+            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // panelLogo
             // 
@@ -155,11 +314,10 @@ namespace estoque_projeto_integradora
             // 
             this.painelExcluir.AutoSize = true;
             this.painelExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(31)))), ((int)(((byte)(29)))));
+            this.painelExcluir.Controls.Add(this.cmdEstoque);
             this.painelExcluir.Controls.Add(this.cmdPedido);
             this.painelExcluir.Controls.Add(this.ExclCliente);
-            this.painelExcluir.Controls.Add(this.button6);
             this.painelExcluir.Controls.Add(this.excluFornecedor);
-            this.painelExcluir.Controls.Add(this.ExcluProduto);
             this.painelExcluir.Controls.Add(this.excluFunc);
             this.painelExcluir.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelExcluir.Location = new System.Drawing.Point(0, 150);
@@ -169,6 +327,37 @@ namespace estoque_projeto_integradora
             this.painelExcluir.TabIndex = 4;
             this.painelExcluir.Visible = false;
             // 
+            // cmdEstoque
+            // 
+            this.cmdEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmdEstoque.AutoSize = true;
+            this.cmdEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdEstoque.ForeColor = System.Drawing.Color.White;
+            this.cmdEstoque.Location = new System.Drawing.Point(1047, 0);
+            this.cmdEstoque.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdEstoque.Name = "cmdEstoque";
+            this.cmdEstoque.Size = new System.Drawing.Size(175, 69);
+            this.cmdEstoque.TabIndex = 7;
+            this.cmdEstoque.Text = "Estoque";
+            this.cmdEstoque.UseVisualStyleBackColor = true;
+            this.cmdEstoque.Click += new System.EventHandler(this.cmdEstoque_Click);
+            // 
+            // cmdPedido
+            // 
+            this.cmdPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cmdPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdPedido.ForeColor = System.Drawing.Color.White;
+            this.cmdPedido.Location = new System.Drawing.Point(821, 2);
+            this.cmdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmdPedido.Name = "cmdPedido";
+            this.cmdPedido.Size = new System.Drawing.Size(175, 69);
+            this.cmdPedido.TabIndex = 6;
+            this.cmdPedido.Text = "Pedidos";
+            this.cmdPedido.UseVisualStyleBackColor = true;
+            this.cmdPedido.Click += new System.EventHandler(this.cmdPedido_Click);
+            // 
             // ExclCliente
             // 
             this.ExclCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -176,7 +365,7 @@ namespace estoque_projeto_integradora
             this.ExclCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExclCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExclCliente.ForeColor = System.Drawing.Color.White;
-            this.ExclCliente.Location = new System.Drawing.Point(6, 2);
+            this.ExclCliente.Location = new System.Drawing.Point(35, 2);
             this.ExclCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExclCliente.Name = "ExclCliente";
             this.ExclCliente.Size = new System.Drawing.Size(175, 69);
@@ -185,21 +374,6 @@ namespace estoque_projeto_integradora
             this.ExclCliente.UseVisualStyleBackColor = true;
             this.ExclCliente.Click += new System.EventHandler(this.ExclCliente_Click);
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.button6.AutoSize = true;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(1096, 2);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(175, 69);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Setor";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // excluFornecedor
             // 
             this.excluFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -207,7 +381,7 @@ namespace estoque_projeto_integradora
             this.excluFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excluFornecedor.ForeColor = System.Drawing.Color.White;
-            this.excluFornecedor.Location = new System.Drawing.Point(459, 3);
+            this.excluFornecedor.Location = new System.Drawing.Point(568, 2);
             this.excluFornecedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.excluFornecedor.Name = "excluFornecedor";
             this.excluFornecedor.Size = new System.Drawing.Size(175, 69);
@@ -216,28 +390,13 @@ namespace estoque_projeto_integradora
             this.excluFornecedor.UseVisualStyleBackColor = true;
             this.excluFornecedor.Click += new System.EventHandler(this.excluFornecedor_Click);
             // 
-            // ExcluProduto
-            // 
-            this.ExcluProduto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.ExcluProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcluProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExcluProduto.ForeColor = System.Drawing.Color.White;
-            this.ExcluProduto.Location = new System.Drawing.Point(875, 3);
-            this.ExcluProduto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ExcluProduto.Name = "ExcluProduto";
-            this.ExcluProduto.Size = new System.Drawing.Size(175, 69);
-            this.ExcluProduto.TabIndex = 2;
-            this.ExcluProduto.Text = "Produtos";
-            this.ExcluProduto.UseVisualStyleBackColor = true;
-            this.ExcluProduto.Click += new System.EventHandler(this.ExcluProduto_Click);
-            // 
             // excluFunc
             // 
             this.excluFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.excluFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.excluFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.excluFunc.ForeColor = System.Drawing.Color.White;
-            this.excluFunc.Location = new System.Drawing.Point(236, 2);
+            this.excluFunc.Location = new System.Drawing.Point(293, 2);
             this.excluFunc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.excluFunc.Name = "excluFunc";
             this.excluFunc.Size = new System.Drawing.Size(175, 69);
@@ -245,6 +404,18 @@ namespace estoque_projeto_integradora
             this.excluFunc.Text = "Funcionario";
             this.excluFunc.UseVisualStyleBackColor = true;
             this.excluFunc.Click += new System.EventHandler(this.excluFunc_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::estoque_projeto_integradora.Properties.Resources.GLMCONTROLL;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 150);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1283, 598);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // panelCadastrar
             // 
@@ -439,6 +610,17 @@ namespace estoque_projeto_integradora
             this.AlterarFuncionario.UseVisualStyleBackColor = true;
             this.AlterarFuncionario.Click += new System.EventHandler(this.AlterarFuncionario_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
+            this.pictureBox1.Location = new System.Drawing.Point(321, 302);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(729, 268);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // lbltitle
             // 
             this.lbltitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -512,29 +694,6 @@ namespace estoque_projeto_integradora
             this.paneltitlebar.TabIndex = 1;
             this.paneltitlebar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.paneltitlebar_MouseDown);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::estoque_projeto_integradora.Properties.Resources.GLMCONTROLL;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 150);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1283, 598);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::estoque_projeto_integradora.Properties.Resources.Planet9_3840x2160;
-            this.pictureBox1.Location = new System.Drawing.Point(321, 302);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(729, 268);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnFechaChildForms
             // 
             this.btnFechaChildForms.FlatAppearance.BorderSize = 0;
@@ -547,181 +706,6 @@ namespace estoque_projeto_integradora
             this.btnFechaChildForms.TabIndex = 3;
             this.btnFechaChildForms.UseVisualStyleBackColor = true;
             this.btnFechaChildForms.Click += new System.EventHandler(this.btnFechaChildForms_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button2.Image = global::estoque_projeto_integradora.Properties.Resources.trending_up__1_1;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 656);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(261, 82);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Movimentação do dia";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Image = global::estoque_projeto_integradora.Properties.Resources.add_shopping_cart;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 574);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(261, 82);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Armazenar no estoque";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button5.Image = global::estoque_projeto_integradora.Properties.Resources.shopping_list;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 492);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(261, 82);
-            this.button5.TabIndex = 8;
-            this.button5.Text = " Relatorio";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button4.Image = global::estoque_projeto_integradora.Properties.Resources.value__1_;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 410);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(261, 82);
-            this.button4.TabIndex = 5;
-            this.button4.Text = " Pesquisar";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button3.Image = global::estoque_projeto_integradora.Properties.Resources.cross_out__2_;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 328);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(39, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(261, 82);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "  Excluir";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAlterar.Image = global::estoque_projeto_integradora.Properties.Resources.settings;
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(0, 246);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnAlterar.Size = new System.Drawing.Size(261, 82);
-            this.btnAlterar.TabIndex = 3;
-            this.btnAlterar.Text = " Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCadastrar.Image = global::estoque_projeto_integradora.Properties.Resources.value;
-            this.btnCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrar.Location = new System.Drawing.Point(0, 164);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnCadastrar.Size = new System.Drawing.Size(261, 82);
-            this.btnCadastrar.TabIndex = 2;
-            this.btnCadastrar.Text = " Cadastrar";
-            this.btnCadastrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedidos.FlatAppearance.BorderSize = 0;
-            this.btnPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedidos.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPedidos.Image = global::estoque_projeto_integradora.Properties.Resources.shopping_cart__1_;
-            this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 82);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
-            this.btnPedidos.Size = new System.Drawing.Size(261, 82);
-            this.btnPedidos.TabIndex = 1;
-            this.btnPedidos.Text = " Pedidos";
-            this.btnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
-            // 
-            // cmdPedido
-            // 
-            this.cmdPedido.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmdPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmdPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdPedido.ForeColor = System.Drawing.Color.White;
-            this.cmdPedido.Location = new System.Drawing.Point(677, 2);
-            this.cmdPedido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmdPedido.Name = "cmdPedido";
-            this.cmdPedido.Size = new System.Drawing.Size(175, 69);
-            this.cmdPedido.TabIndex = 6;
-            this.cmdPedido.Text = "Pedidos";
-            this.cmdPedido.UseVisualStyleBackColor = true;
-            this.cmdPedido.Click += new System.EventHandler(this.cmdPedido_Click);
             // 
             // FrmPrincipalOficial
             // 
@@ -744,14 +728,14 @@ namespace estoque_projeto_integradora
             this.panel1.PerformLayout();
             this.painelExcluir.ResumeLayout(false);
             this.painelExcluir.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelCadastrar.ResumeLayout(false);
             this.panelCadastrar.PerformLayout();
             this.panelAlterar.ResumeLayout(false);
             this.panelAlterar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.paneltitlebar.ResumeLayout(false);
             this.paneltitlebar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -779,7 +763,6 @@ namespace estoque_projeto_integradora
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnMaximizar;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button ExcluProduto;
         private System.Windows.Forms.Button excluFunc;
         private System.Windows.Forms.Panel paneltitlebar;
         private System.Windows.Forms.Panel panelCadastrar;
@@ -794,9 +777,9 @@ namespace estoque_projeto_integradora
         private System.Windows.Forms.Button AlterarFuncionario;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button ExclCliente;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button excluFornecedor;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button cmdPedido;
+        private System.Windows.Forms.Button cmdEstoque;
     }
 }
