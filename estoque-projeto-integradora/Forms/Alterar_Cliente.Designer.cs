@@ -102,9 +102,10 @@ namespace estoque_projeto_integradora.Forms
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(213, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 32);
+            this.label1.Size = new System.Drawing.Size(96, 32);
             this.label1.TabIndex = 28;
             this.label1.Text = "Nome ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -113,7 +114,7 @@ namespace estoque_projeto_integradora.Forms
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(213, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 32);
+            this.label2.Size = new System.Drawing.Size(70, 32);
             this.label2.TabIndex = 29;
             this.label2.Text = "CPF";
             // 
@@ -124,7 +125,7 @@ namespace estoque_projeto_integradora.Forms
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(213, 279);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 32);
+            this.label3.Size = new System.Drawing.Size(136, 32);
             this.label3.TabIndex = 30;
             this.label3.Text = "Endereço";
             // 
@@ -135,7 +136,7 @@ namespace estoque_projeto_integradora.Forms
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(213, 377);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 32);
+            this.label4.Size = new System.Drawing.Size(126, 32);
             this.label4.TabIndex = 31;
             this.label4.Text = "Telefone";
             // 

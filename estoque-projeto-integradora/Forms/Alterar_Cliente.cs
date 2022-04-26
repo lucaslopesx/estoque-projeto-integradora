@@ -47,5 +47,10 @@ namespace estoque_projeto_integradora.Forms
             MessageBox.Show("Registro alterado com sucesso!");
             carregar();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
